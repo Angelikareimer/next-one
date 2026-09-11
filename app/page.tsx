@@ -15,36 +15,50 @@ const days = [
     day: "Tag 1",
     title: "Sag es laut.",
     body: "Beziehung. Kinder. Heiraten. Was davon willst du? Heute sagst du es einer einzigen Person: dir. Ohne „aber ich bin da auch flexibel“ hinterherzuschieben.",
+    image: "/next-one-story.jpg",
+    alt: "Eine Frau geht selbstbewusst ihren Weg",
   },
   {
     day: "Tag 2",
     title: "Dein K.O.-Kriterium.",
     body: "Keine Wunschliste mit 27 Punkten. Du legst die Dinge fest, bei denen du nicht feilschst. Auch dann nicht, wenn du ihn inzwischen richtig gut findest.",
+    image: "/next-one-phone.jpg",
+    alt: "Eine Frau hält ihr Handy in der Hand",
   },
   {
     day: "Tag 3",
     title: "Die Frage, die dir zwei Jahre spart.",
     body: <><span>Es gibt eine Art, das zu fragen, nach der ein Mann bleibt. Und eine, nach der er flüchtet.</span><strong>Du bekommst die erste. Wörtlich.</strong></>,
+    image: "/next-one-calm.jpg",
+    alt: "Eine Frau blickt ruhig und klar in die Kamera",
   },
   {
     day: "Tag 4",
     title: "Sein Vielleicht ist kein Versprechen.",
     body: <><span><em>„Ich weiß gerade nicht, was ich will.“</em><br />Diesen Satz hast du bisher übersetzt. In etwas, das noch kommt.</span><strong>Nach diesem Audio macht er etwas anderes mit dir.</strong></>,
+    image: "/next-one-arrived.jpg",
+    alt: "Eine Frau wirkt gelöst und bei sich angekommen",
   },
   {
     day: "Tag 5",
     title: "Hör auf, es dir zu erklären.",
     body: <><span>An diesem Tag hörst du dir selbst dabei zu.</span><strong>Das ist der unangenehmste Tag der Woche. Und der, nach dem die meisten Frauen mir schreiben.</strong></>,
+    image: "/next-one-portrait.jpg",
+    alt: "Ein ruhiges Portrait einer selbstbewussten Frau",
   },
   {
     day: "Tag 6",
     title: "Next one. Not next round.",
     body: <><span>Er schreibt nach drei Wochen: <em>„Hey, wie geht&apos;s?“</em><br />Du weißt genau, was danach passiert. Es ist jedes Mal dasselbe.</span><strong>Hier bekommst du die zwei Sätze, nach denen es diesmal nicht passiert.</strong></>,
+    image: "/next-one-phone.jpg",
+    alt: "Eine Frau liest eine Nachricht auf ihrem Handy",
   },
   {
     day: "Tag 7",
     title: "This one or next one?",
     body: "Jetzt liegt alles vor dir. Was du willst. Was er anbietet. Was du bisher weggeredet hast. Und dann entscheidest du.",
+    image: "/next-one-calm.jpg",
+    alt: "Eine Frau blickt klar und zuversichtlich nach vorn",
   },
 ];
 
@@ -313,7 +327,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section days section-tint">
+      <section className="section days section-tint" id="tage">
         <div className="container-wide">
           <div className="section-heading">
             <p className="eyebrow">Deine sieben Tage</p>
@@ -322,10 +336,15 @@ export default function Home() {
           <div className="days-grid">
             {days.map((item, index) => (
               <article className={`day-card${index === 6 ? " day-card-final" : ""}`} key={item.day}>
-                <span>{item.day}</span>
-                <h3>{item.title}</h3>
-                <div className="day-body">{item.body}</div>
-                {index === 6 && <strong>This one? Or Next One?</strong>}
+                <div className="day-card-copy">
+                  <span>{item.day}</span>
+                  <h3>{item.title}</h3>
+                  <div className="day-body">{item.body}</div>
+                  {index === 6 && <strong className="day-decision">This one? Or Next One?</strong>}
+                </div>
+                <figure className="day-card-visual">
+                  <img src={item.image} alt={item.alt} loading="lazy" />
+                </figure>
               </article>
             ))}
           </div>
