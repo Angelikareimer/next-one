@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-11",
+  "project": "NEXT ONE",
+  "framework": "Vinext / Next.js React",
+  "existingDesign": {
+    "displayFont": "Playfair",
+    "bodyFont": "Mulish",
+    "palette": "warm cream, burgundy, antique gold",
+    "motion": ["press-logo marquee", "button hover states"],
+    "spacing": "large repeated section blocks with mixed raw values"
+  },
+  "findings": [
+    "Too many sections use the same bordered card and shadow treatment.",
+    "Display headings compete with one another because scale and spacing stay nearly constant.",
+    "The 7-day journey is the product core but does not yet control the page rhythm.",
+    "Mobile is readable but several components feel oversized and visually dense.",
+    "The brand palette and photography already provide a strong warm-exclusive foundation."
+  ],
+  "selectedSystem": {
+    "macrostructure": "Narrative Workflow",
+    "theme": "Atelier",
+    "hero": "H2 Split Diptych",
+    "navigation": "N9 Edge-aligned minimal",
+    "footer": "Ft2 Inline-rule single-line",
+    "coreSequence": "F4 Step Sequence"
+  }
+}
