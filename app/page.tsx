@@ -126,6 +126,19 @@ export default function Home() {
         <a className="nav-cta" href={checkoutUrl}>Next One starten</a>
       </header>
 
+      <aside className="press-strip" aria-label="Bekannt aus 20 Minuten, Blick, Maxi, Miss Moneypenny und Vayamo">
+        <div className="press-track">
+          {[0, 1, 2].map((item) => (
+            <img
+              key={item}
+              src="/press-logos-transparent.png"
+              alt={item === 0 ? "20 Minuten, Blick, Maxi, Miss Moneypenny und Vayamo" : ""}
+              aria-hidden={item === 0 ? undefined : true}
+            />
+          ))}
+        </div>
+      </aside>
+
       <section className="hero" id="top">
         <div className="hero-shell">
           <div className="hero-copy">
@@ -160,13 +173,22 @@ export default function Home() {
           </figure>
         </div>
         <div className="hero-authority container-wide">
-          <strong>Next One zeigt dir in 7 Tagen, was er dir anbietet.</strong>
-          <span>Damit du nicht noch ein Jahr wartest, ohne eine Antwort zu bekommen.</span>
-          <small className="authority-badge">
-            <span><b>10+</b> Jahre Erfahrung</span>
-            <span><b>500+</b> Frauen begleitet</span>
-            <span>MindFuck Coaching · Positive Psychologie · Embodiment</span>
-          </small>
+          <div className="authority-card-copy">
+            <p className="authority-kicker">10+ Jahre Erfahrung · 500+ Frauen begleitet</p>
+            <h2>Next One zeigt dir in 7 Tagen, <em>was er dir anbietet.</em></h2>
+            <p>Damit du nicht noch ein Jahr wartest, ohne eine Antwort zu bekommen.</p>
+            <a className="button button-compact" href={checkoutUrl}>
+              <span>Next One starten</span><span aria-hidden="true">→</span>
+            </a>
+            <div className="authority-credentials" aria-label="Qualifikationen">
+              <span>MindFuck Coaching</span>
+              <span>Positive Psychologie</span>
+              <span>Embodiment</span>
+            </div>
+          </div>
+          <figure className="authority-card-image">
+            <img src="/next-one-arrived.jpg" alt="Eine zuversichtliche Frau, die Klarheit ausstrahlt" />
+          </figure>
         </div>
       </section>
 
