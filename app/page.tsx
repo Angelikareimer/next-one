@@ -107,7 +107,7 @@ const faqs = [
   {
     question: "Wie bekomme ich die Audios?",
     answer:
-      "Ab dem 19. September bekommst du jeden Morgen ein neues Audio, sieben Tage lang. Danach gehören sie dir.",
+      "Ab dem 19. September bekommst du jeden Morgen ein neues Audio, 7 Tage lang. Danach gehören sie dir.",
   },
   {
     question: "Ich habe schon so viel darüber gelesen, warum Männer sich zurückziehen. Was ist hier anders?",
@@ -132,7 +132,7 @@ export default function Home() {
             <p className="hero-label">NEXT ONE · 7 TAGE · 7 AUDIOS</p>
             <p className="hero-audience">Für Frauen, die schnell erkennen, was sie nicht mehr wollen.<br />Und trotzdem zu lange warten, wenn sie einen Mann wirklich wollen.</p>
             <h1>
-              In sieben Tagen weißt du, <em>was er dir anbietet.</em>
+              In 7 Tagen weißt du, <em>was er dir anbietet.</em>
               <br />Und ob du das nimmst.
             </h1>
             <p className="hero-sub">
@@ -160,9 +160,13 @@ export default function Home() {
           </figure>
         </div>
         <div className="hero-authority container-wide">
-          <strong>Next One zeigt dir in sieben Tagen, was er dir anbietet.</strong>
+          <strong>Next One zeigt dir in 7 Tagen, was er dir anbietet.</strong>
           <span>Damit du nicht noch ein Jahr wartest, ohne eine Antwort zu bekommen.</span>
-          <small>10+ Jahre · 500+ Frauen · MindFuck Coaching · Positive Psychologie · Embodiment</small>
+          <small className="authority-badge">
+            <span><b>10+</b> Jahre Erfahrung</span>
+            <span><b>500+</b> Frauen begleitet</span>
+            <span>MindFuck Coaching · Positive Psychologie · Embodiment</span>
+          </small>
         </div>
       </section>
 
@@ -311,7 +315,7 @@ export default function Home() {
           <div className="format-grid">
             <div><strong>Audio</strong><span>weil du es beim Anziehen hörst.</span></div>
             <div><strong>Morgens</strong><span>weil die Aufgabe dann den ganzen Tag Zeit hat.</span></div>
-            <div><strong>Sieben Tage</strong><span>weil du nach zwei noch nichts entschieden und nach dreißig aufgegeben hättest.</span></div>
+            <div><strong>7 Tage</strong><span>weil du nach zwei noch nichts entschieden und nach dreißig aufgegeben hättest.</span></div>
           </div>
           <p className="serif-lead centered">Wir klären.</p>
           <p>Es macht einen Unterschied, ob du gerade jemanden kennenlernst oder seit drei Jahren in derselben Schleife sitzt. Deshalb bekommst du jeden Tag zwei Aufgaben. Eine fürs Daten. Eine fürs Hin und Her.</p>
@@ -330,7 +334,7 @@ export default function Home() {
       <section className="section days section-tint" id="tage">
         <div className="container-wide">
           <div className="section-heading">
-            <p className="eyebrow">Deine sieben Tage</p>
+            <p className="eyebrow">Deine 7 Tage</p>
             <h2>Eine Frage pro Tag. <em>Eine Antwort für dich.</em></h2>
           </div>
           <div className="days-grid">
@@ -352,9 +356,9 @@ export default function Home() {
             <span className="pdf-mark">PDF</span>
             <div>
               <h3>Deine Next-One-Karte</h3>
-              <p>Alle deine Antworten aus den sieben Tagen auf einer Seite. Für den Moment, in dem du beim nächsten Mann denkst: Vielleicht sehe ich das gerade zu streng.</p>
+              <p>Alle deine Antworten aus den 7 Tagen auf einer Seite. Für den Moment, in dem du beim nächsten Mann denkst: Vielleicht sehe ich das gerade zu streng.</p>
               <strong>Und es bleibt dir.</strong>
-              <p>Heute machst du NEXT ONE wegen ihm. In zwei Jahren machst du es wegen jemand anderem. Die sieben Fragen bleiben dieselben.</p>
+              <p>Heute machst du NEXT ONE wegen ihm. In zwei Jahren machst du es wegen jemand anderem. Die 7 Fragen bleiben dieselben.</p>
             </div>
           </div>
         </div>
@@ -371,7 +375,7 @@ export default function Home() {
             <p>Dein Handy liegt auf dem Tisch. Display nach unten.</p>
             <p>Du schaust nicht, ob er online war. Nicht weil du dich zusammenreißt. Sondern weil du weißt, woran du bist.</p>
             <p>Du bist verabredet. Nicht <em>falls er absagt</em>. Verabredet.</p>
-            <p className="accent-copy">Das ist der Unterschied. Und dafür brauchst du sieben Tage, keine zwei Jahre.</p>
+            <p className="accent-copy">Das ist der Unterschied. Und dafür brauchst du 7 Tage, keine zwei Jahre.</p>
             <Cta compact />
             <p className="microcopy left">37 € einmalig · Start am 19. September · Dauerhafter Zugriff auf alle Audios</p>
           </div>
@@ -505,7 +509,7 @@ export default function Home() {
               <span>Dauerhafter Zugriff</span>
             </div>
             <Cta />
-            <p className="price-close">Sieben Tage kosten dich 37 €. Das letzte Jahr, in dem du nicht gefragt hast, hat dich mehr gekostet.</p>
+            <p className="price-close">7 Tage kosten dich 37 €. Das letzte Jahr, in dem du nicht gefragt hast, hat dich mehr gekostet.</p>
           </div>
         </div>
       </section>
@@ -550,7 +554,7 @@ export default function Home() {
       </footer>
 
       <div className="sticky-cta">
-        <a href={checkoutUrl}>Next One starten · 37 € <span aria-hidden="true">→</span></a>
+        <a href={checkoutUrl}>Next One starten <span aria-hidden="true">→</span></a>
       </div>
     </main>
   );
