@@ -225,6 +225,8 @@ strong {
 }
 
 .press-strip {
+  --press-gap: clamp(48px, 7vw, 110px);
+  --press-logo-width: clamp(390px, 31vw, 510px);
   width: 100%;
   overflow: hidden;
   border-bottom: 1px solid rgba(91, 66, 55, 0.12);
@@ -234,17 +236,23 @@ strong {
 .press-track {
   display: flex;
   width: max-content;
-  min-width: 100%;
   align-items: center;
-  justify-content: space-around;
-  gap: clamp(48px, 7vw, 110px);
+  gap: var(--press-gap);
   padding: 26px clamp(28px, 5vw, 70px);
+  animation: press-marquee 14s linear infinite;
+  will-change: transform;
 }
 
 .press-track img {
-  width: clamp(390px, 31vw, 510px);
+  width: var(--press-logo-width);
   flex: 0 0 auto;
   opacity: 0.62;
+}
+
+@keyframes press-marquee {
+  to {
+    transform: translate3d(calc((var(--press-logo-width) + var(--press-gap)) * -1), 0, 0);
+  }
 }
 
 .nav-cta:focus-visible,
@@ -1842,14 +1850,12 @@ footer a {
   }
 
   .press-track {
-    gap: 42px;
-    justify-content: flex-start;
     padding: 19px 22px;
-    transform: translateX(-10px);
   }
 
-  .press-track img {
-    width: 335px;
+  .press-strip {
+    --press-gap: 42px;
+    --press-logo-width: 335px;
   }
 
   .hero-copy {

@@ -128,7 +128,7 @@ export default function Home() {
 
       <aside className="press-strip" aria-label="Bekannt aus 20 Minuten, Blick, Maxi, Miss Moneypenny und Vayamo">
         <div className="press-track">
-          {[0, 1, 2].map((item) => (
+          {Array.from({ length: 10 }, (_, item) => (
             <img
               key={item}
               src="/press-logos-transparent.png"
