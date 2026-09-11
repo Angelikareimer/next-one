@@ -126,19 +126,6 @@ export default function Home() {
         <a className="nav-cta" href={checkoutUrl}>Next One starten</a>
       </header>
 
-      <aside className="press-strip" aria-label="Bekannt aus 20 Minuten, Blick, Maxi, Miss Moneypenny und Vayamo">
-        <div className="press-track">
-          {Array.from({ length: 10 }, (_, item) => (
-            <img
-              key={item}
-              src="/press-logos-transparent.png"
-              alt={item === 0 ? "20 Minuten, Blick, Maxi, Miss Moneypenny und Vayamo" : ""}
-              aria-hidden={item === 0 ? undefined : true}
-            />
-          ))}
-        </div>
-      </aside>
-
       <section className="hero" id="top">
         <div className="hero-shell">
           <div className="hero-copy">
@@ -191,6 +178,19 @@ export default function Home() {
           </figure>
         </div>
       </section>
+
+      <aside className="press-strip" aria-label="Bekannt aus 20 Minuten, Blick, Maxi, Miss Moneypenny und Vayamo">
+        <div className="press-track">
+          {Array.from({ length: 10 }, (_, item) => (
+            <img
+              key={item}
+              src="/press-logos-transparent.png"
+              alt={item === 0 ? "20 Minuten, Blick, Maxi, Miss Moneypenny und Vayamo" : ""}
+              aria-hidden={item === 0 ? undefined : true}
+            />
+          ))}
+        </div>
+      </aside>
 
       <section className="band">
         <div className="container">
