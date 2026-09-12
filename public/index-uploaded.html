@@ -185,48 +185,128 @@ blockquote p{margin:0;max-width:none}
 .tool-copy{max-width:740px}
 .tool h2{font-size:clamp(32px,4.4vw,56px);line-height:1.06}
 .tool .sub{font-family:Playfair,Georgia,serif;font-style:italic;font-size:clamp(18px,2vw,24px);color:var(--muted);margin:-16px 0 34px}
-.tool .rule{font-family:Playfair,Georgia,serif;font-size:clamp(24px,3vw,36px);color:var(--wine);margin:36px 0;
-  padding:22px 0;border-top:1px solid rgba(173,147,104,.5);border-bottom:1px solid rgba(173,147,104,.5)}
-.four{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:34px 0}
-.four div{padding:20px 16px;background:var(--white);border:1px solid var(--line);border-left:3px solid var(--gold);
-  border-radius:10px;font-size:14.5px;font-weight:800}
+
+/* MASSSTAB — EIGENER ABSCHNITT */
+.measure-break{position:relative;overflow:hidden;padding:clamp(84px,10vw,146px) clamp(24px,6.5vw,96px) clamp(96px,11vw,158px);
+  background:radial-gradient(circle at 88% 8%,rgba(173,147,104,.16),transparent 30rem),#f3ebe3;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.measure-break-inner{width:min(1180px,100%);margin:auto}
+.measure-break h2{max-width:19ch;color:var(--wine);font-size:clamp(40px,5.8vw,76px);line-height:1.05;letter-spacing:-.025em}
+.measure-ruler{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));list-style:none;
+  margin:clamp(54px,7vw,82px) 0 clamp(52px,7vw,76px);padding:64px 0 0}
+.measure-ruler:before{content:"";position:absolute;inset:0 0 auto;height:30px;border-top:2px solid rgba(129,70,63,.72);
+  background-image:linear-gradient(to right,rgba(129,70,63,.38) 1px,transparent 1px),linear-gradient(to right,var(--wine) 2px,transparent 2px);
+  background-size:2.5% 11px,25% 28px;background-repeat:repeat-x}
+.measure-ruler:after{content:"";position:absolute;right:0;top:0;width:2px;height:28px;background:var(--wine)}
+.measure-ruler li{position:relative;min-height:92px;padding:0 clamp(16px,2.4vw,30px);text-align:center}
+.measure-ruler li+li{border-left:1px solid rgba(129,70,63,.14)}
+.measure-ruler li:before{content:"";position:absolute;top:-69px;left:50%;width:10px;height:10px;border-radius:50%;
+  background:var(--wine);box-shadow:0 0 0 6px #f3ebe3;transform:translateX(-50%)}
+.measure-number{display:block;margin-bottom:8px;color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.2em;font-variant-numeric:tabular-nums}
+.measure-ruler strong{display:block;font-family:Playfair,Georgia,serif;font-size:clamp(19px,2vw,25px);font-weight:500;line-height:1.25;text-wrap:balance}
+.measure-copy{display:grid;grid-template-columns:minmax(0,1.03fr) minmax(340px,.78fr);gap:clamp(48px,7vw,94px);align-items:start}
+.measure-copy-lead{max-width:31ch;margin:0;font-family:Playfair,Georgia,serif;font-size:clamp(24px,2.8vw,36px);line-height:1.35;color:var(--ink)}
+.measure-copy-detail{padding-top:8px;border-top:1px solid rgba(129,70,63,.25)}
+.measure-copy-detail p{max-width:54ch}
+.measure-copy-detail p:last-child{margin-bottom:0}
 
 /* PROOF */
 .proof-section{background:#f1e8e1!important}
 .proof-layout{width:min(1180px,100%);margin:auto}
 .proof-intro{max-width:760px;margin-bottom:clamp(38px,5vw,62px)}
-.proof-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(420px,1.08fr);gap:clamp(28px,5vw,64px);align-items:start}
-.proof-feature{padding:clamp(34px,4vw,50px);background:var(--paper3);border:1px solid var(--line);border-radius:10px;box-shadow:0 24px 64px rgba(75,54,45,.08)}
-.proof-feature:before{content:"“";display:block;font-family:Playfair,Georgia,serif;font-size:78px;line-height:.65;color:var(--wine);margin-bottom:24px}
-.proof-feature p{font-family:Playfair,Georgia,serif;font-size:clamp(21px,2.2vw,29px);line-height:1.43;margin:0}
-.proof-feature .proof-small{font-family:Mulish,Arial,sans-serif;font-size:15px;color:var(--muted);margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
-.proof-shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.proof-shot{margin:0;padding:18px;background:var(--paper);border:1px solid var(--line);border-radius:10px;box-shadow:0 18px 48px rgba(75,54,45,.08)}
-.proof-shot img{width:100%;height:100%;max-height:430px;object-fit:contain;border-radius:7px;background:#fff}
-.proof-conclusion{max-width:780px;margin:clamp(42px,6vw,72px) 0 0}
-.proof-note{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:16px 0 0}
+.proof-collage{width:100%;margin:0;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:12px;
+  box-shadow:0 28px 72px rgba(75,54,45,.1)}
+.proof-collage img{width:100%;height:auto}
+.proof-conclusion{max-width:1100px;margin:clamp(42px,6vw,72px) 0 0}
+.proof-conclusion .statement{max-width:none;font-size:clamp(27px,3.2vw,46px);line-height:1.34}
+.proof-conclusion>p:last-child{max-width:70ch;font-size:clamp(17px,1.5vw,20px)}
 
-/* LISTEN */
+/* KLARSTELLUNG */
+.clarity-section{background:var(--paper3)!important;padding:clamp(48px,6vw,88px) clamp(24px,6.5vw,96px)}
+.clarity-layout{width:min(1280px,100%);margin:auto;display:grid;grid-template-columns:minmax(360px,.82fr) minmax(0,1.18fr);
+  align-items:stretch;background:var(--white);border:1px solid var(--line);border-radius:6px;overflow:hidden;
+  box-shadow:0 30px 80px rgba(75,54,45,.09)}
+.clarity-portrait{margin:0;min-height:780px;overflow:hidden}
+.clarity-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:saturate(.78) contrast(.97)}
+.clarity-copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(48px,5.8vw,86px)}
+.clarity-copy h2{font-size:clamp(36px,4.2vw,58px);line-height:1.08;margin-bottom:28px}
+.clarity-copy .training{margin:0}
+.clarity-copy .training div{padding:clamp(18px,2.2vw,26px) 0}
+.clarity-copy .training b{font-size:14px;letter-spacing:.08em}
+.clarity-copy .training p{max-width:58ch;font-size:16px;line-height:1.65}
+.clarity-copy .statement{max-width:none;margin:34px 0 0;font-size:clamp(24px,2.7vw,38px);line-height:1.34}
+
+/* FÜR DICH / NICHT FÜR DICH */
+.fit-section{padding:clamp(92px,11vw,158px) clamp(24px,6.5vw,96px);background:var(--paper3);border-top:1px solid var(--line)}
+.fit-layout{width:min(1280px,100%);margin:auto;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(340px,.9fr);
+  gap:clamp(22px,3vw,38px);align-items:start}
+.fit-card{position:relative;padding:clamp(38px,4.5vw,62px);border-radius:14px;overflow:hidden}
+.fit-card h2{font-size:clamp(32px,3.8vw,50px);line-height:1.08;margin-bottom:30px}
+.fit-card--yes{color:var(--ink);background:radial-gradient(circle at 92% 4%,rgba(255,253,249,.72),transparent 36%),linear-gradient(145deg,var(--paper2) 0%,#eadbd7 58%,#e1cdc8 100%);
+  border:1px solid rgba(129,70,63,.22);box-shadow:0 34px 88px rgba(103,54,48,.13);transform:translateY(-16px)}
+.fit-card--yes:after{content:"";position:absolute;right:-90px;bottom:-110px;width:260px;height:260px;border:1px solid rgba(129,70,63,.22);border-radius:50%;pointer-events:none}
+.fit-card--yes h2{color:var(--ink)}
+.fit-card--no{background:rgba(255,253,249,.76);border:1px solid rgba(129,70,63,.16);box-shadow:0 20px 58px rgba(75,54,45,.07)}
+.fit-card--no h2{font-size:clamp(30px,3.2vw,43px)}
 .fit{list-style:none;padding:0;margin:30px 0 0;display:grid}
 .fit li{position:relative;padding:17px 0 17px 34px;border-bottom:1px solid var(--line)}
 .fit li:before{content:"◇";position:absolute;left:0;top:17px;color:var(--wine)}
+.fit-card--yes .fit{margin-top:0}
+.fit-card--yes .fit li{border-color:rgba(40,34,31,.14);color:rgba(40,34,31,.9)}
+.fit-card--yes .fit li:before{color:var(--wine)}
+.fit-card--yes .fit strong,.fit-card--yes .fit em{color:var(--ink)}
 .notfit li:before{content:"×";font-weight:900}
+.fit-card--no .notfit{margin-top:0}
+.fit-card .beat{max-width:24ch;margin:34px 0 0;padding-top:30px;border-top:1px solid rgba(129,70,63,.22)}
 
 /* ÜBER MICH */
-.about-layout{width:min(1280px,100%);grid-template-columns:minmax(470px,1.08fr) minmax(0,.92fr);gap:clamp(56px,7vw,104px);align-items:start}
+.about-section{background:var(--paper)!important}
+.about-layout{width:min(1280px,100%);margin:auto;display:grid;grid-template-columns:minmax(470px,1.08fr) minmax(0,.92fr);gap:clamp(56px,7vw,104px);align-items:center}
 .about-layout .section-copy{order:2}
-.about-portrait{position:sticky;top:100px;order:1;margin:0;aspect-ratio:4/5.1;overflow:hidden;border-radius:10px;box-shadow:0 28px 70px rgba(75,54,45,.13)}
+.about-visual{position:sticky;top:100px;order:1;align-self:start;padding-bottom:78px}
+.about-portrait{position:relative;margin:0;aspect-ratio:4/5.1;overflow:hidden;border-radius:10px;box-shadow:0 28px 70px rgba(75,54,45,.13)}
 .about-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.about-stat{position:absolute;z-index:2;left:-24px;bottom:42px;width:min(330px,72%);padding:24px 30px;background:var(--white);
+  border:1px solid rgba(129,70,63,.18);border-radius:12px;box-shadow:0 24px 60px rgba(75,54,45,.16)}
+.about-stat strong{display:block;font-family:Playfair,Georgia,serif;font-size:clamp(54px,6vw,78px);font-weight:400;line-height:.9;color:var(--ink)}
+.about-stat span{display:block;margin-top:14px;font-family:Playfair,Georgia,serif;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.about-seal{position:absolute;z-index:3;right:28px;bottom:0;width:126px;height:126px;padding:9px;object-fit:contain;background:var(--white);
+  border-radius:50%;box-shadow:0 20px 54px rgba(75,54,45,.17)}
 .training{display:grid;gap:0;margin:30px 0}
 .training div{padding:20px 0;border-top:1px solid var(--line)}
 .training b{display:block;color:var(--wine);font-size:15px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
 .training p{margin:0;font-size:16px}
+.credentials-row{width:min(1280px,100%);margin:clamp(54px,7vw,86px) auto 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;
+  background:rgba(129,70,63,.15);border-top:1px solid rgba(129,70,63,.15);border-bottom:1px solid rgba(129,70,63,.15)}
+.credential{padding:clamp(28px,3.5vw,44px);background:var(--paper)}
+.credential h3{margin:0 0 16px;color:var(--wine);font-family:Mulish,Arial,sans-serif;font-size:14px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.credential p{margin:0;font-size:16px;line-height:1.65}
 .big{font-family:Playfair,Georgia,serif;font-size:clamp(34px,5vw,64px);color:var(--wine);margin:26px 0}
+
+/* PERSÖNLICHE GESCHICHTE */
+.authority-story{padding:clamp(86px,10vw,142px) clamp(24px,6.5vw,96px);background:var(--paper3);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.authority-story-inner{width:min(1120px,100%);margin:auto}
+.authority-story-lead{max-width:32ch;margin:0 0 clamp(46px,6vw,72px);font-size:clamp(24px,2.6vw,36px);font-weight:850;line-height:1.38}
+.authority-story-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(48px,7vw,96px);padding-top:clamp(42px,5vw,64px);border-top:1px solid rgba(173,147,104,.58)}
+.authority-story-grid>div{max-width:56ch}
+.authority-story .big{font-size:clamp(62px,9vw,118px);line-height:.9;margin:42px 0 0}
+.authority-story-grid>div:last-child{padding-top:8px}
 
 /* MOPS */
 .mops{background:var(--paper)!important}
-.animals{list-style:none;padding:0;margin:26px 0 34px;display:grid;gap:0;max-width:52ch}
-.animals li{padding:14px 0;border-bottom:1px solid var(--line)}
+.mops-inner{width:min(1280px,100%);margin:auto}
+.mops-intro{width:min(900px,100%);margin:auto;text-align:center}
+.mops-intro .kicker{max-width:none;margin-left:auto;margin-right:auto;text-align:center}
+.mops-intro h2{max-width:14ch;margin-left:auto;margin-right:auto}
+.animals{list-style:none;padding:0;margin:clamp(34px,5vw,56px) auto 30px;display:grid;gap:0;width:min(780px,100%)}
+.animals li{padding:18px 0;border-bottom:1px solid var(--line);text-align:center}
+.mops-bridge{margin:34px auto 0}
+.mops-intro .statement{width:100%;max-width:none;margin:clamp(30px,4vw,46px) auto 0;text-align:center}
+.mops-detail{margin-top:clamp(68px,9vw,118px);display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(46px,7vw,96px);align-items:center}
+.mops-photo{margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:10px;box-shadow:0 28px 70px rgba(75,54,45,.13)}
+.mops-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+.mops-copy{max-width:54ch}
+.mops-copy .big{font-size:clamp(32px,4vw,48px);margin:34px 0}
 
 /* PREIS */
 .price{background:var(--paper3)!important;text-align:center}
@@ -239,25 +319,36 @@ blockquote p{margin:0;max-width:none}
 
 /* FAQ */
 .faq{background:var(--white)!important}
-.faq .section-inner{display:block;width:min(860px,100%)}
-details{border-bottom:1px solid var(--line)}
-summary{cursor:pointer;list-style:none;padding:22px 0;font-weight:800;font-size:17px;display:flex;justify-content:space-between;gap:20px}
-summary::-webkit-details-marker{display:none}
-summary:after{content:"+";color:var(--wine);font-weight:800;flex:none}
-details[open] summary:after{content:"–"}
-details p{margin:0 0 22px;color:var(--muted)}
-summary:focus-visible{outline:2px solid var(--wine);outline-offset:3px}
+.faq .section-inner{display:block;width:min(1320px,100%)}
+.faq-kicker{max-width:none;text-align:left;margin:0 0 clamp(42px,6vw,70px)}
+.faq details{border-top:1px solid rgba(129,70,63,.22)}
+.faq details:last-child{border-bottom:1px solid rgba(129,70,63,.22)}
+.faq summary{cursor:pointer;list-style:none;padding:clamp(28px,3.3vw,42px) 0;font-family:Playfair,Georgia,serif;font-weight:500;
+  font-size:clamp(24px,2.45vw,35px);line-height:1.25;display:flex;align-items:center;justify-content:space-between;gap:34px;text-wrap:balance}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";color:var(--wine);font-family:Mulish,Arial,sans-serif;font-size:30px;font-weight:500;line-height:1;flex:none}
+.faq details[open] summary:after{content:"–"}
+.faq details p{max-width:76ch;margin:0;padding:0 64px 32px 0;color:var(--muted)}
+.faq summary:focus-visible{outline:2px solid var(--wine);outline-offset:5px}
 
 /* FINALE */
-.finale{background:#292421!important;color:var(--white);text-align:center}
-.finale .section-inner{display:block;width:min(820px,100%)}
-.finale h2{color:var(--white);font-size:clamp(30px,4.4vw,54px)}
-.finale h2 .gold{color:#d7bd8b;display:block}
-.finale p{color:rgba(253,248,242,.84);margin-left:auto;margin-right:auto}
-.finale .button{background:#f3e9dd;color:var(--wine);border-color:#f3e9dd;margin-top:14px}
-.finale .button:hover{background:#fff;border-color:#fff;color:var(--wine2)}
-.finale .last{margin-top:40px;padding-top:26px;border-top:1px solid rgba(253,248,242,.2);
-  font-family:Playfair,Georgia,serif;font-size:clamp(19px,2.2vw,27px);color:#e9c9a6}
+.finale{background:var(--paper3)!important;color:var(--ink);text-align:left;padding-top:clamp(72px,8vw,112px);padding-bottom:clamp(72px,8vw,112px)}
+.finale-card{width:min(1420px,100%);margin:auto;display:grid;grid-template-columns:minmax(380px,.82fr) minmax(0,1.18fr);
+  background:var(--white);border:1px solid rgba(129,70,63,.12);border-radius:14px;overflow:hidden;box-shadow:0 34px 90px rgba(75,54,45,.1)}
+.finale-media{margin:0;min-height:720px;overflow:hidden}
+.finale-media img{width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:saturate(.76) contrast(.97)}
+.finale-copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(52px,6vw,92px)}
+.finale-copy .kicker{margin-bottom:28px}
+.finale h2{color:var(--ink);font-size:clamp(34px,4.2vw,58px);max-width:16ch}
+.finale h2 .gold{color:var(--wine);display:block}
+.finale-note{margin:clamp(32px,4vw,48px) 0;padding:clamp(26px,3vw,36px) 0;border-top:1px solid rgba(173,147,104,.55);border-bottom:1px solid rgba(173,147,104,.55)}
+.finale-note p{margin:0;color:var(--ink)}
+.finale-note p+p{margin-top:14px}
+.finale .finale-answer{font-size:clamp(27px,3vw,40px);max-width:18ch;margin:0 0 30px}
+.finale .button{width:min(520px,100%);margin-top:8px}
+.finale .click-reassurance{margin:12px 0 0;color:var(--muted)}
+.finale .last{max-width:37ch;margin:36px 0 0;padding-top:26px;border-top:1px solid var(--line);
+  font-family:Playfair,Georgia,serif;font-size:clamp(19px,2.2vw,27px);color:var(--wine)}
 footer{background:#221f1d;padding:clamp(52px,7vw,78px) 24px;text-align:center;font-family:Playfair,Georgia,serif;border-top:1px solid rgba(253,248,242,.09)}
 footer .legal{margin:0 auto;max-width:none;font-size:clamp(15px,1.5vw,18px);color:#c9c2ba}
 footer .legal .sep{margin:0 12px;color:#6b635c}
@@ -269,14 +360,24 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
 
 /* MOBILE */
 @media (max-width:900px){
-  .four{grid-template-columns:repeat(2,1fr)}
   .three{grid-template-columns:1fr}
-  .offer-head,.mechanism-detail-inner,.tool-inner,.proof-grid{grid-template-columns:1fr}
+  .offer-head,.mechanism-detail-inner,.tool-inner{grid-template-columns:1fr}
+  .measure-copy{grid-template-columns:1fr;gap:34px}
+  .clarity-layout{grid-template-columns:1fr}
+  .clarity-portrait{min-height:0;aspect-ratio:4/3.6}
+  .fit-layout{grid-template-columns:1fr}
+  .fit-card--yes{transform:none}
+  .about-layout,.credentials-row,.authority-story-grid{grid-template-columns:1fr}
+  .mops-detail{grid-template-columns:1fr}
+  .mops-photo{width:min(620px,100%);margin:auto;aspect-ratio:4/4.8}
+  .mops-copy{max-width:620px;margin:auto}
+  .finale-card{grid-template-columns:1fr}
+  .finale-media{min-height:0;aspect-ratio:4/4.35}
+  .about-visual{position:relative;top:auto;width:min(640px,100%);margin:auto}
   .offer-copy{text-align:center}
   .meta-line{justify-content:center}
   .reasons{margin-left:auto;margin-right:auto;text-align:left}
   .offer-head .section-media{width:min(520px,100%);margin:auto}
-  .about-layout{grid-template-columns:1fr}
 }
 @media (min-width:821px){
   .hero{min-height:calc(100dvh - 62px)}
@@ -298,15 +399,62 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   .section-copy{order:1}
   .section-inner.reverse .section-media{order:2}
   .section-inner.reverse .section-copy{order:1}
-  .about-layout .section-copy{order:1}
-  .about-portrait{position:relative;top:auto;order:2;aspect-ratio:4/4.5;min-height:520px;width:100%}
-  .proof-shots{grid-template-columns:1fr 1fr}
+  .about-layout .section-copy{order:2}
+  .about-visual{order:1}
+  .about-portrait{aspect-ratio:4/4.5;min-height:520px;width:100%}
   .press-group img{width:480px;height:100px}
   .band-inner{padding-left:22px}
   .mechanism-detail-media{width:min(520px,100%);margin:auto;aspect-ratio:4/4.4}
 }
 @media (max-width:560px){
-  .proof-shots{grid-template-columns:1fr}
+  .nav{padding:11px 14px;gap:10px}
+  .brand{font-size:13px;letter-spacing:.08em;white-space:nowrap}
+  .nav-cta{padding:10px 12px;font-size:9px;line-height:1.15;letter-spacing:.07em;text-align:center}
+  .section{padding-top:76px;padding-bottom:86px}
+  .kicker{letter-spacing:.24em}
+  .hero-inner{padding-left:20px;padding-right:20px}
+  .band{padding-left:20px;padding-right:20px}
+  .band-inner{padding-left:18px}
+  .statement{margin-top:32px;margin-bottom:32px;padding-top:20px;padding-bottom:20px}
+  .measure-break{padding-left:24px;padding-right:24px}
+  .measure-break h2{font-size:clamp(38px,12vw,54px)}
+  .measure-ruler{grid-template-columns:1fr;gap:0;margin:44px 0 50px;padding:0 0 0 56px}
+  .measure-ruler:before{inset:0 auto 0 0;width:28px;height:auto;border-top:0;border-left:2px solid rgba(129,70,63,.72);
+    background-image:linear-gradient(to bottom,rgba(129,70,63,.38) 1px,transparent 1px),linear-gradient(to bottom,var(--wine) 2px,transparent 2px);
+    background-size:11px 12.5%,27px 25%;background-repeat:repeat-y}
+  .measure-ruler:after{top:auto;right:auto;bottom:0;left:0;width:28px;height:2px}
+  .measure-ruler li{min-height:0;padding:18px 0 22px;text-align:left}
+  .measure-ruler li+li{border-left:0;border-top:1px solid rgba(129,70,63,.14)}
+  .measure-ruler li:before{top:50%;left:-61px;transform:translateY(-50%)}
+  .measure-number{margin-bottom:4px}
+  .proof-collage{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .proof-collage img{width:720px;max-width:none}
+  .clarity-section{padding-left:18px;padding-right:18px}
+  .clarity-portrait{aspect-ratio:4/4.5}
+  .clarity-copy{padding:38px 24px 44px}
+  .clarity-copy h2{font-size:clamp(34px,10.5vw,46px)}
+  .fit-section{padding-left:18px;padding-right:18px}
+  .fit-card{padding:36px 24px;border-radius:10px}
+  .fit-card h2,.fit-card--no h2{font-size:clamp(31px,9.5vw,42px)}
+  .about-visual{padding-bottom:62px}
+  .about-stat{left:-8px;bottom:34px;width:min(270px,76%);padding:20px 22px}
+  .about-stat strong{font-size:56px}
+  .about-stat span{font-size:10px}
+  .about-seal{right:12px;width:104px;height:104px}
+  .credentials-row{margin-top:54px}
+  .credential{padding:28px 24px}
+  .authority-story{padding-left:24px;padding-right:24px}
+  .mops-intro{text-align:center}
+  .animals li{text-align:center}
+  .mops-detail{margin-top:64px;gap:38px}
+  .mops-photo{aspect-ratio:4/5}
+  .faq summary{font-size:clamp(22px,7vw,29px);padding:26px 0;gap:20px}
+  .faq summary:after{font-size:26px}
+  .faq details p{padding-right:0;padding-bottom:26px}
+  .finale{padding-left:18px;padding-right:18px}
+  .finale-copy{padding:42px 24px 48px}
+  .finale h2{font-size:clamp(34px,10.2vw,46px)}
+  .finale .finale-answer{font-size:clamp(27px,8vw,36px)}
   .story-quote{padding:24px 20px}
   .about-portrait{min-height:460px}
   .decision-cta .button{min-height:62px;padding:18px 22px;font-size:12px}
@@ -316,6 +464,12 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   .mechanism-intro{padding-left:20px;padding-right:20px}
   .mechanism-intro h2{font-size:clamp(34px,11vw,48px)}
   .mechanism-badge{font-size:10px;letter-spacing:.1em}
+}
+@media (max-width:360px){
+  .brand{font-size:12px;letter-spacing:.055em}
+  .nav-cta{padding:9px 10px;font-size:8.5px}
+  .about-stat{width:72%;padding:17px 18px}
+  .about-seal{right:4px;width:90px;height:90px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.press-track{animation-duration:144s}}
 </style>
@@ -394,7 +548,7 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
         Wo ist es gekippt?<br>
         War deine letzte Nachricht zu viel?</p>
     </div>
-    <figure class="section-media"><img src="next-one-phone.png" alt="Frau liest eine Nachricht auf ihrem Handy"></figure>
+    <figure class="section-media"><img src="next-one-phone.png" alt="Frau liest eine Nachricht auf ihrem Handy" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
@@ -409,7 +563,7 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
       <p>Sie kennt ihre Grenze. Und übergeht sie im selben Satz.</p>
       <p><strong>Genau da sitzt es.</strong></p>
     </div>
-    <figure class="section-media"><img src="next-one-voice-message-703.png" alt="Smartphone mit einer 7:03 Minuten langen Sprachnachricht"></figure>
+    <figure class="section-media"><img src="next-one-voice-message-703.png" alt="Smartphone mit einer 7:03 Minuten langen Sprachnachricht" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
@@ -436,7 +590,7 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
         </div>
       </div>
     </div>
-    <figure class="section-media"><img src="me-first-truth-woman.png" alt="Selbstbewusste Frau sitzt ruhig an einem Tisch"></figure>
+    <figure class="section-media"><img src="me-first-truth-woman.png" alt="Selbstbewusste Frau sitzt ruhig an einem Tisch" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
@@ -451,7 +605,7 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
       <p class="beat">Du brauchst keine weitere Erklärung. Du brauchst eine Antwort, mit der du entscheiden kannst.</p>
       <a class="button" href="https://www.themagneticfemme.co/order-next-one">Ich will es wissen →</a>
     </div>
-    <figure class="section-media"><img src="experience-hero.jpg" alt="Frau blickt zuversichtlich nach vorn"></figure>
+    <figure class="section-media"><img src="experience-hero.jpg" alt="Frau blickt zuversichtlich nach vorn" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
@@ -469,7 +623,7 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
       <blockquote><p>Aber ein Mann kann dir sagen: „Ja, ich will eine Beziehung. Kinder will ich auch. Und jetzt schauen wir, ob das mit uns passt."</p></blockquote>
       <p class="statement"><strong>Er verspricht dir nichts. Er weiß, wohin er will.</strong></p>
     </div>
-    <figure class="section-media"><img src="angelika-hat-boat.jpg" alt="Angelika Reimer mit Hut auf einem Boot"></figure>
+    <figure class="section-media"><img src="angelika-hat-boat.jpg" alt="Angelika Reimer mit Hut auf einem Boot" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
@@ -495,7 +649,7 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
 
 <section class="mechanism-detail">
   <div class="mechanism-detail-inner">
-    <figure class="mechanism-detail-media"><img src="angelika-hero.jpg" alt="Angelika Reimer auf einem Boot"></figure>
+    <figure class="mechanism-detail-media"><img src="assets/woman-sofa-clarity.jpg" alt="Frau sitzt mit einem Glas Rosé-Champagner auf dem Sofa" loading="lazy" decoding="async"></figure>
     <div class="mechanism-detail-copy">
       <p class="kicker">Was du sehen kannst</p>
       <h2>Du siehst, was er dir anbietet.</h2>
@@ -527,7 +681,7 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
         <p><b>7 Tage,</b> weil du nach zwei noch nichts entschieden hast und nach dreißig aufgegeben hättest.</p>
       </div>
     </div>
-    <figure class="section-media"><img src="next-one-story.jpg" alt="Angelika begleitet Frauen durch ihre NEXT ONE Woche"></figure>
+    <figure class="section-media"><img src="next-one-story.jpg" alt="Angelika begleitet Frauen durch ihre NEXT ONE Woche" loading="lazy" decoding="async"></figure>
   </div>
 
   <div class="three">
@@ -548,19 +702,32 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
       <p>In vier Monaten sitzt du wieder auf dem Sofa und denkst: <em>Vielleicht sehe ich das gerade zu streng.</em></p>
       <p>Dann öffnest du deinen Maßstab. Und liest deinen eigenen Satz. Mit Datum.</p>
       <p><strong>Er war dabei, als du klar warst. Und er erinnert sich besser als du.</strong></p>
-      <p class="rule">Ein Maßstab misst. Er diskutiert nicht.</p>
-      <div class="four">
-        <div>Dein Ziel</div><div>Deine K.O.-Kriterien</div><div>Sein Wortlaut</div><div>Deine „ja, aber"-Sätze</div>
-      </div>
-      <p>Und wenn du unsicher wirst, beantwortest du vier Fragen. Zwei Minuten später weißt du, ob das, was du willst, und das, was da ist, zusammenpassen.</p>
-      <p>Ein Link auf deinem Handy. Kein Download, kein Ausdrucken, kein Passwort. Alles bleibt auf deinem Gerät, <strong>weil</strong> niemand außer dir lesen muss, was du über deine Beziehung schreibst.</p>
-      <p><strong>Und er bleibt dir.</strong> Du wirst ihn wieder aufmachen. Vielleicht nächsten Monat, vielleicht in zwei Jahren. Der Maßstab bleibt derselbe. Du hast ihn ja festgelegt.</p>
     </div>
-    <figure class="section-media"><img src="next-one-phone.png" alt="Der Maßstab ist direkt auf dem Handy verfügbar"></figure>
+    <figure class="section-media"><img src="assets/handy-2.jpg" alt="Frau öffnet den persönlichen Maßstab auf ihrem Smartphone" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
-<!-- 7 GEFÜHL -->
+<!-- 7 MASSSTAB-FORTSETZUNG -->
+<section class="measure-break" aria-labelledby="measure-title">
+  <div class="measure-break-inner">
+    <h2 id="measure-title">Ein Maßstab misst. Er diskutiert nicht.</h2>
+    <ol class="measure-ruler" aria-label="Die vier Messpunkte deines persönlichen Maßstabs">
+      <li><span class="measure-number">01</span><strong>Dein Ziel</strong></li>
+      <li><span class="measure-number">02</span><strong>Deine K.O.-Kriterien</strong></li>
+      <li><span class="measure-number">03</span><strong>Sein Wortlaut</strong></li>
+      <li><span class="measure-number">04</span><strong>Deine „ja, aber“-Sätze</strong></li>
+    </ol>
+    <div class="measure-copy">
+      <p class="measure-copy-lead">Und wenn du unsicher wirst, beantwortest du vier Fragen. Zwei Minuten später weißt du, ob das, was du willst, und das, was da ist, zusammenpassen.</p>
+      <div class="measure-copy-detail">
+        <p>Ein Link auf deinem Handy. Kein Download, kein Ausdrucken, kein Passwort. Alles bleibt auf deinem Gerät, <strong>weil</strong> niemand außer dir lesen muss, was du über deine Beziehung schreibst.</p>
+        <p><strong>Und er bleibt dir.</strong> Du wirst ihn wieder aufmachen. Vielleicht nächsten Monat, vielleicht in zwei Jahren. Der Maßstab bleibt derselbe. Du hast ihn ja festgelegt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 GEFÜHL -->
 <section class="section">
   <div class="section-inner">
     <div class="section-copy">
@@ -572,28 +739,20 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
       <p>Das ist der Unterschied. Und dafür brauchst du 7 Tage, keine zwei Jahre.</p>
       <a class="button" href="https://www.themagneticfemme.co/order-next-one">Next One starten →</a>
     </div>
-    <figure class="section-media"><img src="next-one-arrived.jpg" alt="Frau, die nicht mehr wartet und ihren Abend genießt"></figure>
+    <figure class="section-media"><img src="assets/angelika-sofa-rose.jpg" alt="Angelika genießt allein auf dem Sofa ein Glas Rosé-Champagner" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
-<!-- 8 PROOF -->
+<!-- 9 PROOF -->
 <section class="section proof-section">
   <div class="proof-layout">
     <div class="proof-intro">
       <p class="kicker">Was Frauen schreiben</p>
       <h2>Nach einer Woche klingt Klarheit so.</h2>
     </div>
-    <div class="proof-grid">
-      <div class="proof-feature">
-        <p>Ich habe endlich meine ehrliche Meinung geäußert. Es kam keine Reaktion. Aber ich habe mich viel leichter gefühlt.</p>
-        <p class="proof-small">Keine Reaktion – und trotzdem leichter. Weil sie nicht länger raten musste.</p>
-      </div>
-      <div class="proof-shots">
-        <figure class="proof-shot"><img src="assets/proof-ilona-nicht-antworten.png" alt="Nachricht von Ilona über die Stärke, nicht sofort zu antworten"></figure>
-        <figure class="proof-shot"><img src="assets/proof-klare-werte.png" alt="Nachricht einer Teilnehmerin über klare Werte und Taten"></figure>
-      </div>
-    </div>
-    <p class="proof-note">Originalnachrichten · Namen teilweise anonymisiert</p>
+    <figure class="proof-collage">
+      <img src="assets/testimonials.jpg" alt="Collage aus sechs anonymisierten Nachrichten von Teilnehmerinnen über Klarheit, Selbstwert und ehrliche Kommunikation" loading="lazy" decoding="async">
+    </figure>
     <div class="proof-conclusion">
       <p class="statement">Sie hat nicht bekommen, was sie wollte. <strong>Sie hat bekommen, was sie brauchte: eine Antwort.</strong></p>
       <p>Und eine andere Frau schrieb: „Ich nehme vor allem mit, mich immer zu fragen: Warum will ich gerade, dass er mir schreibt?"</p>
@@ -601,10 +760,13 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   </div>
 </section>
 
-<!-- 9 VERSTÄNDNIS -->
-<section class="section">
-  <div class="section-inner single">
-    <div class="section-copy">
+<!-- 10 VERSTÄNDNIS -->
+<section class="clarity-section">
+  <div class="clarity-layout">
+    <figure class="clarity-portrait">
+      <img src="assets/angelika-jacke.jpg" alt="Angelika Reimer zieht ihre Jacke an" loading="lazy" decoding="async">
+    </figure>
+    <div class="clarity-copy">
       <h2>Damit wir uns richtig verstehen.</h2>
       <div class="training">
         <div><b>Next One verspricht dir keinen Mann</b><p>Wann jemand kommt, weiß ich nicht. Ob der Mann, den du gerade willst, THIS ONE ist, weiß ich auch nicht.</p></div>
@@ -616,10 +778,10 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   </div>
 </section>
 
-<!-- 10 FÜR WEN -->
-<section class="section">
-  <div class="section-inner single">
-    <div class="section-copy">
+<!-- 11 FÜR WEN -->
+<section class="fit-section">
+  <div class="fit-layout">
+    <article class="fit-card fit-card--yes">
       <h2>Next One ist für dich, wenn</h2>
       <ul class="fit">
         <li>Du eine Beziehung willst und es ihm nie so gesagt hast.</li>
@@ -629,47 +791,64 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
         <li>Du im Job in fünf Minuten entscheidest und abends zwanzig Minuten an vier Wörtern von ihm hängst.</li>
         <li>Du dieses leise Gefühl hast: <strong>Ich verliere hier gerade Zeit.</strong> Und es niemandem sagst.</li>
       </ul>
-      <h2 style="margin-top:64px">Und für wen Next One nicht ist</h2>
+    </article>
+    <article class="fit-card fit-card--no">
+      <h2>Und für wen Next One nicht ist</h2>
       <ul class="fit notfit">
         <li>Du suchst eine Strategie, mit der er sich ändert? Kauf das nicht.</li>
         <li>Du willst wissen, wie du ihn zurückbekommst? Kauf das nicht.</li>
         <li>Du willst, dass dir jemand sagt <em>„Keine Sorge, eigentlich meint er es bestimmt ernst"</em>? Das bekommst du hier nicht. Von mir nie.</li>
       </ul>
       <p class="beat">Ich arbeite mit Frauen, die etwas entscheiden wollen. Nicht mit Frauen, die noch eine Meinung sammeln.</p>
-    </div>
+    </article>
   </div>
 </section>
 
-<!-- 11 ÜBER MICH -->
-<section class="section">
-  <div class="section-inner about-layout">
-    <figure class="about-portrait"><img src="next-one-portrait.jpg" alt="Angelika Reimer"></figure>
+<!-- 12 ÜBER MICH -->
+<section class="section about-section">
+  <div class="about-layout">
+    <div class="about-visual">
+      <figure class="about-portrait"><img src="next-one-portrait.jpg" alt="Angelika Reimer" loading="lazy" decoding="async"></figure>
+      <div class="about-stat"><strong>500+</strong><span>Frauen begleitet</span></div>
+      <img class="about-seal" src="assets/mindfuck-coach-siegel.png" alt="Zertifizierter MindFuck Coach" loading="lazy" decoding="async">
+    </div>
     <div class="section-copy">
       <p class="kicker">Über mich</p>
       <h2>Hi, ich bin Angelika.</h2>
       <p>Seit über 10 Jahren arbeite ich mit Frauen an genau diesem Moment:</p>
       <p class="statement"><strong>„Das reicht mir nicht."</strong><br>Fünf Minuten später: <em>„Vielleicht erwarte ich einfach zu viel."</em></p>
       <p>Über 500 Frauen habe ich begleitet. Und ich habe drei Ausbildungen, die genau an dieser Stelle zusammenspielen.</p>
-      <div class="training">
-        <div><b>MindFuck Coach</b><p>Weil genau da, wo aus „Das reicht mir nicht" wieder „Vielleicht erwarte ich zu viel" wird, ein Gedanke sich selbst überschreibt. Das ist die Stelle, an der ich arbeite.</p></div>
-        <div><b>Positive Psychologie</b><p>Weil ich dich nicht frage, was mit dir nicht stimmt. Ich frage dich, welche Beziehung du willst.</p></div>
-        <div><b>Embodiment</b><p>Weil du um 22:17 Uhr längst weißt, was richtig wäre. Und es trotzdem schwer wird.</p></div>
+    </div>
+  </div>
+  <div class="credentials-row">
+    <article class="credential"><h3>MindFuck Coach</h3><p>Weil genau da, wo aus „Das reicht mir nicht" wieder „Vielleicht erwarte ich zu viel" wird, ein Gedanke sich selbst überschreibt. Das ist die Stelle, an der ich arbeite.</p></article>
+    <article class="credential"><h3>Positive Psychologie</h3><p>Weil ich dich nicht frage, was mit dir nicht stimmt. Ich frage dich, welche Beziehung du willst.</p></article>
+    <article class="credential"><h3>Embodiment</h3><p>Weil du um 22:17 Uhr längst weißt, was richtig wäre. Und es trotzdem schwer wird.</p></article>
+  </div>
+</section>
+
+<!-- 13 PERSÖNLICHE GESCHICHTE -->
+<section class="authority-story">
+  <div class="authority-story-inner">
+    <p class="authority-story-lead">Welche andere Frau in diesem Feld hat genau diese drei? Ich kenne keine.</p>
+    <div class="authority-story-grid">
+      <div>
+        <p>Und ich kenne die andere Seite selbst gut genug. Ich habe jahrelang gewartet, dass ER mir sagt, woran ich bin. Ich wusste alles über ihn. Warum er Zeit braucht. Warum ich Verständnis haben sollte. Warum dieser eine Rückzug nichts bedeutet.</p>
+        <p class="tight">Eine Person habe ich dabei ziemlich schlecht kennengelernt.</p>
+        <p class="big">Mich.</p>
       </div>
-      <p><strong>Welche andere Frau in diesem Feld hat genau diese drei? Ich kenne keine.</strong></p>
-      <p>Und ich kenne die andere Seite selbst gut genug. Ich habe jahrelang gewartet, dass ER mir sagt, woran ich bin. Ich wusste alles über ihn. Warum er Zeit braucht. Warum ich Verständnis haben sollte. Warum dieser eine Rückzug nichts bedeutet.</p>
-      <p class="tight">Eine Person habe ich dabei ziemlich schlecht kennengelernt.</p>
-      <p class="big">Mich.</p>
-      <p>Heute weiß ich beim ersten Kaffee, dass ich eine Beziehung will. Und ich sage es. Nicht beim fünften Date, wenn ich vorher abgecheckt habe, ob er dasselbe will. <strong>Beim ersten.</strong></p>
-      <p>Nicht weil ich weiß, dass er bleibt. Sondern weil ich keine zwei Jahre mehr brauche, um herauszufinden, ob wir dasselbe suchen.</p>
+      <div>
+        <p>Heute weiß ich beim ersten Kaffee, dass ich eine Beziehung will. Und ich sage es. Nicht beim fünften Date, wenn ich vorher abgecheckt habe, ob er dasselbe will. <strong>Beim ersten.</strong></p>
+        <p>Nicht weil ich weiß, dass er bleibt. Sondern weil ich keine zwei Jahre mehr brauche, um herauszufinden, ob wir dasselbe suchen.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 12 MOPS -->
+<!-- 14 MOPS -->
 <section class="section mops">
-  <div class="section-inner">
-    <figure class="section-media"><img src="assets/angelika-calm.jpg" alt="Angelika Reimer"></figure>
-    <div class="section-copy">
+  <div class="mops-inner">
+    <div class="mops-intro">
       <p class="kicker">Und noch etwas über mich</p>
       <h2>Im Dating gibt es alle Tiere.</h2>
       <ul class="animals">
@@ -677,18 +856,23 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
         <li>Die Chamäleons, die werden, was er gerade sucht.</li>
         <li>Die Rehe, die beim ersten Geräusch wegrennen.</li>
       </ul>
-      <p>Und dann gibt es den Mops.</p>
+      <p class="mops-bridge">Und dann gibt es den Mops.</p>
       <p class="statement"><strong>Ein Mops verbiegt sich für niemanden.<br>Und wird trotzdem geliebt.</strong></p>
-      <p>Er hat seinen eigenen Kopf. Er macht keine Kunststücke, damit man ihn mag. Er sieht aus wie er aussieht und entschuldigt sich nicht dafür.</p>
-      <p class="big" style="font-size:clamp(26px,3.4vw,42px)">Ich bin der Mops.</p>
-      <p>Samstagabend sitze ich mit einem Glas Champagner-Rosé auf dem Sofa. Der Mops liegt neben mir. Und mein Handy liegt mit dem Display nach unten.</p>
-      <p>Ja, Champagner an einem normalen Samstag. Manche finden das übertrieben.</p>
-      <p><strong>Das ist okay. Ich arbeite nicht mit denen.</strong></p>
+    </div>
+    <div class="mops-detail">
+      <figure class="mops-photo"><img src="assets/angelika-mops-web.jpg" alt="Angelika Reimer mit ihrem Mops" loading="lazy" decoding="async"></figure>
+      <div class="mops-copy">
+        <p>Er hat seinen eigenen Kopf. Er macht keine Kunststücke, damit man ihn mag. Er sieht aus wie er aussieht und entschuldigt sich nicht dafür.</p>
+        <p class="big">Ich bin der Mops.</p>
+        <p>Samstagabend sitze ich mit einem Glas Champagner-Rosé auf dem Sofa. Der Mops liegt neben mir. Und mein Handy liegt mit dem Display nach unten.</p>
+        <p>Ja, Champagner an einem normalen Samstag. Manche finden das übertrieben.</p>
+        <p><strong>Das ist okay. Ich arbeite nicht mit denen.</strong></p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 13 PREIS -->
+<!-- 15 PREIS -->
 <section class="section price" id="kaufen">
   <div class="price-card">
     <p class="kicker" style="margin-bottom:6px">Next One</p>
@@ -700,11 +884,11 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   <p class="trade">7 Tage kosten dich 37 €.<br>Das letzte Jahr, in dem du nicht gefragt hast, hat dich mehr gekostet.</p>
 </section>
 
-<!-- 14 FAQ -->
+<!-- 16 FAQ -->
 <section class="section faq">
   <div class="section-inner">
-    <h2 style="margin-bottom:26px">Fragen</h2>
-    <details open><summary>Ich date einfach, ich bin in keinem Hin und Her. Passt das?</summary>
+    <p class="kicker faq-kicker">Noch Fragen?</p>
+    <details><summary>Ich date einfach, ich bin in keinem Hin und Her. Passt das?</summary>
       <p>Ja. Jeden Tag gibt es eine Aufgabe fürs Daten und eine fürs Hin und Her. Wenn du gerade jemanden kennenlernst, stellst du die Fragen, bevor aus drei Dates drei ungeklärte Jahre werden.</p></details>
     <details><summary>Muss ich ihm wirklich sagen, dass ich Kinder will?</summary>
       <p>Du entscheidest, was du wann sagst. An Tag 1 sagst du es nur dir. Ab Tag 3 zeige ich dir, wie du früh fragst, ohne aus dem ersten Kaffee ein Bewerbungsgespräch zu machen.</p></details>
@@ -720,16 +904,22 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   </div>
 </section>
 
-<!-- 15 FINALE -->
+<!-- 17 FINALE -->
 <section class="section finale">
-  <div class="section-inner">
-    <h2>Nächsten Samstag <span class="gold">hältst du dir keinen Tag mehr frei für jemanden, der nicht zugesagt hat.</span></h2>
-    <p>Entweder er hat zugesagt. Oder du bist woanders.</p>
-    <p>Er weiß nicht, was er will?</p>
-    <h2 style="margin:28px 0">Das ist seine Baustelle. <span class="gold">Nicht dein Kalender.</span></h2>
-    <a class="button" href="https://www.themagneticfemme.co/order-next-one">Ja, ich will es wissen →</a>
-    <p class="click-reassurance" style="color:rgba(253,248,242,.65)">37 € · Start am 19. September · Dauerhafter Zugang</p>
-    <p class="last">Das ist kein Kurs über Männer. Das ist die Woche, in der du aufhörst zu raten.</p>
+  <div class="finale-card">
+    <figure class="finale-media"><img src="next-one-arrived.jpg" alt="Angelika Reimer auf einem Boot" loading="lazy" decoding="async"></figure>
+    <div class="finale-copy">
+      <p class="kicker">Deine Einladung</p>
+      <h2>Nächsten Samstag <span class="gold">hältst du dir keinen Tag mehr frei für jemanden, der nicht zugesagt hat.</span></h2>
+      <div class="finale-note">
+        <p>Entweder er hat zugesagt. Oder du bist woanders.</p>
+        <p>Er weiß nicht, was er will?</p>
+      </div>
+      <h2 class="finale-answer">Das ist seine Baustelle. <span class="gold">Nicht dein Kalender.</span></h2>
+      <a class="button" href="https://www.themagneticfemme.co/order-next-one">Ja, ich will es wissen →</a>
+      <p class="click-reassurance">37 € · Start am 19. September · Dauerhafter Zugang</p>
+      <p class="last">Das ist kein Kurs über Männer. Das ist die Woche, in der du aufhörst zu raten.</p>
+    </div>
   </div>
 </section>
 
