@@ -60,10 +60,10 @@ a{color:inherit}
 
 /* PRESSEBANNER */
 .press-strip{overflow:hidden;background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:9px 0}
-.press-track{display:flex;width:max-content;animation:press-scroll 28s linear infinite;will-change:transform}
+.press-track{display:flex;width:max-content;min-width:max-content;transform:translate3d(0,0,0);animation:press-scroll 17s linear infinite;animation-play-state:running;will-change:transform}
 .press-group{display:flex;align-items:center;flex:none}
-.press-group img{width:720px;height:150px;object-fit:contain;opacity:.66;filter:grayscale(1)}
-@keyframes press-scroll{to{transform:translateX(-50%)}}
+.press-group img{display:block;width:720px;height:150px;max-width:none;object-fit:contain;opacity:.66;filter:grayscale(1)}
+@keyframes press-scroll{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
 
 /* EDITORIALER ÜBERGANG */
 .band{background:var(--paper3);padding:clamp(62px,8vw,104px) 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -276,7 +276,7 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   .story-quote{padding:24px 20px}
   .about-portrait{min-height:460px}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important}.press-track{animation:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.press-track{animation-duration:34s}}
 </style>
 </head>
 <body>
