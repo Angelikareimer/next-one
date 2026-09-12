@@ -137,19 +137,33 @@ blockquote p{margin:0;max-width:none}
 .decision-trust-copy strong{color:var(--wine);font-size:15px}
 
 /* MECHANISMUS */
-.mech{background:#eee3da;color:var(--ink);padding:clamp(88px,11vw,150px) clamp(24px,6.5vw,96px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.mech-inner{width:min(1180px,100%);margin:auto;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,.78fr);gap:clamp(52px,7vw,94px);align-items:center}
-.mech-copy{max-width:700px}
-.mech h2{color:var(--ink);font-size:clamp(31px,4.4vw,56px);line-height:1.08;margin-bottom:34px}
-.mech h2 span{display:block}
-.mech h2 .gold{color:var(--wine);font-style:italic}
-.mech p{color:var(--muted)}
+.mechanism-intro{background:var(--paper3);padding:clamp(88px,10vw,142px) clamp(24px,6.5vw,96px);border-top:1px solid var(--line)}
+.mechanism-intro-inner{width:min(1080px,100%);margin:auto;text-align:center}
+.mechanism-badge{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin:0 0 34px;padding:11px 20px;border:1px solid var(--line);border-radius:999px;color:var(--wine);font-size:12px;font-weight:850;letter-spacing:.14em;text-transform:uppercase;background:rgba(255,255,255,.4)}
+.mechanism-badge span{font-size:10px}
+.mechanism-intro h2{max-width:1000px;margin:0 auto;color:var(--ink);font-size:clamp(38px,5.6vw,72px);line-height:1.05}
+.mechanism-intro h2 span,.mechanism-intro h2 em{display:block}
+.mechanism-intro h2 em{color:var(--wine);font-weight:400}
+.mechanism-lead{margin:42px auto 0;font-size:clamp(18px,1.8vw,23px);color:var(--ink)}
+.mechanism-context{max-width:760px;margin:24px auto 0;color:var(--muted)}
+.mechanism-context + .mechanism-context{margin-top:10px}
+.mechanism-intro .decision-cta{max-width:760px;margin:42px auto 0;text-align:center}
+.mechanism-intro .decision-cta .button{justify-content:center;text-align:center}
+.mechanism-intro .click-reassurance{text-align:center}
+.mechanism-intro .decision-audience{margin:28px auto 18px;text-align:center}
+.mechanism-intro .decision-trust{margin:0 auto}
+.mechanism-detail{background:#eee3da;color:var(--ink);padding:clamp(88px,10vw,140px) clamp(24px,6.5vw,96px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mechanism-detail-inner{width:min(1180px,100%);margin:auto;display:grid;grid-template-columns:minmax(340px,.78fr) minmax(0,1.05fr);gap:clamp(52px,7vw,94px);align-items:center}
+.mechanism-detail-copy{max-width:700px}
+.mechanism-detail h2{color:var(--ink);font-size:clamp(34px,4.4vw,56px);line-height:1.08;margin-bottom:30px}
+.mechanism-detail p{color:var(--muted)}
 .anapher{list-style:none;padding:0;margin:34px 0;max-width:56ch;text-align:left}
-.anapher li{padding:13px 0;border-top:1px solid var(--line);font-size:17px}
-.mech .flip{font-family:Playfair,Georgia,serif;font-size:clamp(24px,3.2vw,38px);line-height:1.25;margin-top:38px;color:var(--ink)}
-.mech .flip .gold{color:var(--wine);display:block}
-.mech-media{margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:10px;box-shadow:0 30px 80px rgba(75,54,45,.14)}
-.mech-media img{width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:saturate(.76) contrast(.97)}
+.anapher li{padding:15px 0 15px 30px;border-top:1px solid var(--line);font-size:17px;position:relative}
+.anapher li:before{content:"\00d7";position:absolute;left:0;top:13px;color:var(--wine);font-size:23px}
+.mechanism-detail .flip{font-family:Playfair,Georgia,serif;font-size:clamp(24px,3.2vw,38px);line-height:1.25;margin-top:38px;color:var(--ink)}
+.mechanism-detail .flip .gold{color:var(--wine);display:block}
+.mechanism-detail-media{margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:10px;box-shadow:0 30px 80px rgba(75,54,45,.14)}
+.mechanism-detail-media img{width:100%;height:100%;object-fit:cover;object-position:center 24%;filter:saturate(.82) contrast(.98)}
 
 /* ANGEBOT */
 .offer-head{max-width:1180px;margin:0 auto clamp(52px,7vw,80px);display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.78fr);gap:clamp(48px,7vw,92px);align-items:center}
@@ -257,7 +271,7 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
 @media (max-width:900px){
   .four{grid-template-columns:repeat(2,1fr)}
   .three{grid-template-columns:1fr}
-  .offer-head,.mech-inner,.tool-inner,.proof-grid{grid-template-columns:1fr}
+  .offer-head,.mechanism-detail-inner,.tool-inner,.proof-grid{grid-template-columns:1fr}
   .offer-copy{text-align:center}
   .meta-line{justify-content:center}
   .reasons{margin-left:auto;margin-right:auto;text-align:left}
@@ -289,7 +303,7 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   .proof-shots{grid-template-columns:1fr 1fr}
   .press-group img{width:480px;height:100px}
   .band-inner{padding-left:22px}
-  .mech-media{width:min(520px,100%);margin:auto;aspect-ratio:4/4.4}
+  .mechanism-detail-media{width:min(520px,100%);margin:auto;aspect-ratio:4/4.4}
 }
 @media (max-width:560px){
   .proof-shots{grid-template-columns:1fr}
@@ -299,6 +313,9 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   .decision-audience{font-size:15px}
   .decision-trust{align-items:flex-start}
   .proof-faces span{flex-basis:34px;width:34px;height:34px}
+  .mechanism-intro{padding-left:20px;padding-right:20px}
+  .mechanism-intro h2{font-size:clamp(34px,11vw,48px)}
+  .mechanism-badge{font-size:10px;letter-spacing:.1em}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}.press-track{animation-duration:144s}}
 </style>
@@ -457,14 +474,31 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
 </section>
 
 <!-- 4 MECHANISMUS -->
-<section class="mech">
-  <div class="mech-inner">
-    <div class="mech-copy">
-      <p class="kicker">Der neue Blick</p>
-      <h2><span>Du musst nicht wissen, was in ihm vorgeht.</span><span class="gold">Du musst sehen, was er dir anbietet.</span></h2>
-      <p><strong>Und entscheiden, ob du das willst.</strong></p>
-      <p>Was in ihm vorgeht, weiß ich nicht. Nach 10 Jahren mit über 500 Frauen sage ich dir ehrlich: Ich kann nicht in den Kopf eines Mannes schauen. Du auch nicht.</p>
-      <p>Was auf dem Tisch liegt, kannst du sehen. Erraten musst du es nicht.</p>
+<section class="mechanism-intro">
+  <div class="mechanism-intro-inner">
+    <p class="mechanism-badge"><span>◇</span> Der neue Blick <span>◇</span></p>
+    <h2><span>Du musst nicht wissen, was in ihm vorgeht.</span><em>Du musst sehen, was er dir anbietet.</em></h2>
+    <p class="mechanism-lead"><strong>Und entscheiden, ob du das willst.</strong></p>
+    <p class="mechanism-context">Was in ihm vorgeht, weiß ich nicht. Nach 10 Jahren mit über 500 Frauen sage ich dir ehrlich: Ich kann nicht in den Kopf eines Mannes schauen. Du auch nicht.</p>
+    <p class="mechanism-context"><strong>Was auf dem Tisch liegt, kannst du sehen. Erraten musst du es nicht.</strong></p>
+    <div class="decision-cta">
+      <p class="cta-row"><a class="button" href="https://www.themagneticfemme.co/order-next-one">Ja, ich will es wissen →</a></p>
+      <p class="click-reassurance">37 € einmalig · Start am 19. September · Dauerhafter Zugang</p>
+      <p class="decision-audience">Für Frauen, die schnell erkennen, was sie nicht mehr wollen.<br><span>Und trotzdem zu lange warten, wenn sie einen Mann wirklich wollen.</span></p>
+      <div class="decision-trust" aria-label="Über 500 Frauen bereits von Angelika begleitet">
+        <div class="proof-faces" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="decision-trust-copy"><strong>500+ begeisterte Frauen</strong><br>bereits von Angelika begleitet</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mechanism-detail">
+  <div class="mechanism-detail-inner">
+    <figure class="mechanism-detail-media"><img src="angelika-hero.jpg" alt="Angelika Reimer auf einem Boot"></figure>
+    <div class="mechanism-detail-copy">
+      <p class="kicker">Was du sehen kannst</p>
+      <h2>Du siehst, was er dir anbietet.</h2>
       <ul class="anapher">
         <li>Du siehst, ob er plant oder abwartet.</li>
         <li>Du siehst, ob er zusagt oder sich alles offen hält.</li>
@@ -475,7 +509,6 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
       <p class="flip">Nicht mehr: „Was meint er damit?"
         <span class="gold">Sondern: „Was bietet er mir an? Und will ICH das?"</span></p>
     </div>
-    <figure class="mech-media"><img src="next-one-calm.jpg" alt="Frau schaut ruhig und selbstsicher in die Kamera"></figure>
   </div>
 </section>
 
