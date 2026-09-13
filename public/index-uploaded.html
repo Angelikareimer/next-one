@@ -175,49 +175,57 @@ blockquote p{margin:0;max-width:none}
 .mechanism-detail-media img{width:100%;height:100%;object-fit:cover;object-position:center 24%;filter:saturate(.82) contrast(.98)}
 
 /* ANGEBOT */
-.offer-head{max-width:1180px;margin:0 auto clamp(52px,7vw,80px);display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.78fr);gap:clamp(48px,7vw,92px);align-items:center}
-.offer-copy{text-align:left}
-.offer-head h2{font-size:clamp(30px,4.2vw,54px);line-height:1.08}
-.offer-head h2 .wine{color:var(--wine)}
-.meta-line{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:flex-start;margin:30px 0 0;padding:0;list-style:none;
-  font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.reasons{width:min(760px,100%);margin:36px 0 0;padding:24px 0 0;border-top:1px solid var(--line);
-  display:grid;gap:8px;font-size:15.5px;color:var(--muted)}
-.reasons b{color:var(--ink)}
-.three{width:min(900px,100%);margin:56px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
-.three div{padding:26px 18px;border-top:3px solid var(--wine);background:var(--white);border-radius:10px;
-  font-family:Playfair,Georgia,serif;font-size:clamp(18px,1.8vw,23px);line-height:1.3;box-shadow:0 18px 48px rgba(75,54,45,.07)}
+.offer-intro{padding:clamp(86px,10vw,142px) clamp(24px,6.5vw,96px) clamp(74px,8vw,112px);background:var(--paper)}
+.offer-intro-inner{width:min(980px,100%);margin:auto}
+.offer-intro h2{max-width:19ch;margin-bottom:34px;font-size:clamp(34px,4.8vw,62px);line-height:1.08;letter-spacing:-.025em}
+.offer-intro h2 strong{font-weight:600}
+.offer-intro h2 em{display:block;margin-top:.14em;color:var(--wine);font-weight:400}
+.offer-intro-copy{max-width:65ch;font-size:clamp(17px,1.45vw,20px)}
+.offer-intro-copy p:last-child{margin-bottom:0}
+.offer-method{padding:clamp(74px,8vw,112px) clamp(24px,6.5vw,96px) clamp(82px,9vw,126px);background:#4a302e;color:#f8eee7;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+.offer-method-inner{width:min(1280px,100%);margin:auto}
+.offer-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.offer-step{min-width:0;padding:clamp(30px,3.2vw,44px);background:rgba(255,253,249,.035);border:1px solid rgba(248,238,231,.2);border-radius:8px}
+.offer-step-number{display:block;margin-bottom:20px;font-family:Playfair,Georgia,serif;font-size:clamp(32px,3vw,44px);font-style:italic;line-height:1;color:#e2aaa0;font-variant-numeric:tabular-nums}
+.offer-step h3{min-height:2.5em;margin-bottom:22px;color:#fff8f2;font-family:Mulish,Arial,sans-serif;font-size:clamp(17px,1.45vw,21px);font-weight:850;line-height:1.25;text-transform:none}
+.offer-step p{margin-bottom:16px;color:rgba(248,238,231,.78);font-size:15px;line-height:1.65}
+.offer-step p:last-child{margin-bottom:0}
+.offer-conclusion{padding:clamp(82px,10vw,140px) clamp(24px,6.5vw,96px) clamp(96px,11vw,154px);background:var(--paper3);border-bottom:1px solid var(--line)}
+.offer-conclusion-inner{width:min(1040px,100%);margin:auto}
+.offer-outcomes{max-width:32ch;margin:0 0 clamp(42px,5vw,62px);font-family:Playfair,Georgia,serif;font-size:clamp(27px,3.4vw,44px);line-height:1.3}
+.offer-outcomes strong{color:var(--wine)}
+.offer-manifesto{max-width:31ch;margin:0 0 34px;padding:24px 0;border-top:1px solid rgba(173,147,104,.58);border-bottom:1px solid rgba(173,147,104,.58);font-family:Playfair,Georgia,serif;font-size:clamp(25px,3vw,38px);font-weight:700;line-height:1.25;color:var(--wine)}
+.offer-conclusion-copy{max-width:68ch;font-size:clamp(17px,1.45vw,20px)}
+.offer-conclusion-copy p:last-child{margin-bottom:0}
 
-/* MASSSTAB */
-.tool{background:var(--paper3)!important}
-.tool-inner{width:min(1180px,100%);margin:auto;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(340px,.78fr);gap:clamp(52px,7vw,92px);align-items:center}
-.tool-copy{max-width:740px}
-.tool h2{font-size:clamp(32px,4.4vw,56px);line-height:1.06}
-.tool .sub{font-family:Playfair,Georgia,serif;font-style:italic;font-size:clamp(18px,2vw,24px);color:var(--muted);margin:-16px 0 34px}
-
-/* MASSSTAB — EIGENER ABSCHNITT */
-.measure-break{position:relative;overflow:hidden;padding:clamp(84px,10vw,146px) clamp(24px,6.5vw,96px) clamp(96px,11vw,158px);
-  background:radial-gradient(circle at 88% 8%,rgba(173,147,104,.16),transparent 30rem),#f3ebe3;
-  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.measure-break-inner{width:min(1180px,100%);margin:auto}
-.measure-break h2{max-width:19ch;color:var(--wine);font-size:clamp(40px,5.8vw,76px);line-height:1.05;letter-spacing:-.025em}
-.measure-ruler{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));list-style:none;
-  margin:clamp(54px,7vw,82px) 0 clamp(52px,7vw,76px);padding:64px 0 0}
-.measure-ruler:before{content:"";position:absolute;inset:0 0 auto;height:30px;border-top:2px solid rgba(129,70,63,.72);
-  background-image:linear-gradient(to right,rgba(129,70,63,.38) 1px,transparent 1px),linear-gradient(to right,var(--wine) 2px,transparent 2px);
-  background-size:2.5% 11px,25% 28px;background-repeat:repeat-x}
-.measure-ruler:after{content:"";position:absolute;right:0;top:0;width:2px;height:28px;background:var(--wine)}
-.measure-ruler li{position:relative;min-height:92px;padding:0 clamp(16px,2.4vw,30px);text-align:center}
-.measure-ruler li+li{border-left:1px solid rgba(129,70,63,.14)}
-.measure-ruler li:before{content:"";position:absolute;top:-69px;left:50%;width:10px;height:10px;border-radius:50%;
-  background:var(--wine);box-shadow:0 0 0 6px #f3ebe3;transform:translateX(-50%)}
-.measure-number{display:block;margin-bottom:8px;color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.2em;font-variant-numeric:tabular-nums}
-.measure-ruler strong{display:block;font-family:Playfair,Georgia,serif;font-size:clamp(19px,2vw,25px);font-weight:500;line-height:1.25;text-wrap:balance}
-.measure-copy{display:grid;grid-template-columns:minmax(0,1.03fr) minmax(340px,.78fr);gap:clamp(48px,7vw,94px);align-items:start}
-.measure-copy-lead{max-width:31ch;margin:0;font-family:Playfair,Georgia,serif;font-size:clamp(24px,2.8vw,36px);line-height:1.35;color:var(--ink)}
-.measure-copy-detail{padding-top:8px;border-top:1px solid rgba(129,70,63,.25)}
-.measure-copy-detail p{max-width:54ch}
-.measure-copy-detail p:last-child{margin-bottom:0}
+/* NEXT ONE READ */
+.read-intro{padding:clamp(88px,10vw,148px) clamp(24px,6.5vw,96px);background:var(--paper3);border-top:1px solid var(--line)}
+.read-intro-inner{width:min(1220px,100%);margin:auto;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(340px,.72fr);gap:clamp(52px,7vw,94px);align-items:center}
+.read-copy{max-width:730px}
+.read-copy h2{font-size:clamp(34px,4.4vw,58px);line-height:1.08;margin-bottom:18px}
+.read-sub{max-width:46ch;margin-bottom:40px;color:var(--wine);font-family:Playfair,Georgia,serif;font-size:clamp(20px,2vw,27px);font-style:italic;line-height:1.42}
+.read-questions{list-style:none;margin:34px 0 0;padding:0;border-top:1px solid rgba(129,70,63,.22);counter-reset:read-question}
+.read-questions li{position:relative;padding:14px 0 14px 52px;border-bottom:1px solid rgba(129,70,63,.16);font-weight:700;line-height:1.45;counter-increment:read-question}
+.read-questions li:before{content:"0" counter(read-question);position:absolute;left:0;top:16px;color:var(--wine);font-size:10px;font-weight:900;letter-spacing:.16em;font-variant-numeric:tabular-nums}
+.read-media{margin:0;aspect-ratio:4/5.15;overflow:hidden;border-radius:10px;box-shadow:0 30px 80px rgba(75,54,45,.12)}
+.read-media img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.72) contrast(.97)}
+.read-facts{margin-top:40px;padding:26px 0;border-top:1px solid rgba(173,147,104,.55);border-bottom:1px solid rgba(173,147,104,.55);font-family:Playfair,Georgia,serif;font-size:clamp(21px,2.25vw,29px);line-height:1.4}
+.read-facts strong{color:var(--wine)}
+.read-results{padding:clamp(84px,10vw,140px) clamp(24px,6.5vw,96px) clamp(96px,11vw,154px);background:radial-gradient(circle at 88% 8%,rgba(173,147,104,.16),transparent 30rem),#f3ebe3;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.read-results-inner{width:min(1220px,100%);margin:auto}
+.read-results h2{max-width:18ch;color:var(--wine);font-size:clamp(36px,4.8vw,62px);line-height:1.08;letter-spacing:-.025em}
+.read-result-scale{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:clamp(58px,7vw,82px) 0 clamp(50px,6vw,72px);padding-top:42px;border-top:2px solid rgba(129,70,63,.7)}
+.read-result{position:relative;padding:0 clamp(22px,3vw,38px)}
+.read-result:first-child{padding-left:0}
+.read-result:last-child{padding-right:0}
+.read-result+.read-result{border-left:1px solid rgba(129,70,63,.18)}
+.read-result:before{content:"";position:absolute;top:-49px;left:clamp(22px,3vw,38px);width:12px;height:12px;border-radius:50%;background:var(--wine);box-shadow:0 0 0 7px #f3ebe3}
+.read-result:first-child:before{left:0}
+.read-result h3{margin-bottom:18px;color:var(--wine);font-family:Mulish,Arial,sans-serif;font-size:clamp(14px,1.35vw,18px);font-weight:900;letter-spacing:.08em;line-height:1.25}
+.read-result p{margin:0;color:var(--muted);font-size:15px;line-height:1.65}
+.read-result-notes{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(38px,6vw,82px);padding-top:34px;border-top:1px solid rgba(129,70,63,.22)}
+.read-result-notes p{margin:0;max-width:58ch}
+.read-result-notes p:last-child{font-weight:750;color:var(--ink)}
 
 /* PROOF */
 .proof-section{background:#f1e8e1!important}
@@ -369,9 +377,7 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
 
 /* MOBILE */
 @media (max-width:900px){
-  .three{grid-template-columns:1fr}
-  .offer-head,.mechanism-detail-inner,.tool-inner{grid-template-columns:1fr}
-  .measure-copy{grid-template-columns:1fr;gap:34px}
+  .mechanism-detail-inner,.read-intro-inner{grid-template-columns:1fr}
   .clarity-layout{grid-template-columns:1fr}
   .clarity-portrait{min-height:0;aspect-ratio:4/3.6}
   .fit-layout{grid-template-columns:1fr}
@@ -383,10 +389,6 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   .finale-card{grid-template-columns:1fr}
   .finale-media{min-height:0;aspect-ratio:4/4.35}
   .about-visual{position:relative;top:auto;width:min(640px,100%);margin:auto}
-  .offer-copy{text-align:center}
-  .meta-line{justify-content:center}
-  .reasons{margin-left:auto;margin-right:auto;text-align:left}
-  .offer-head .section-media{width:min(520px,100%);margin:auto}
 }
 @media (min-width:821px){
   .hero{min-height:calc(100dvh - 62px)}
@@ -427,6 +429,7 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   .press-group img{width:480px;height:100px}
   .band-inner{padding-left:22px}
   .mechanism-detail-media{width:min(520px,100%);margin:auto;aspect-ratio:4/4.4}
+  .read-media{width:min(520px,100%);margin:auto;aspect-ratio:4/4.4}
 }
 @media (max-width:560px){
   .nav{padding:11px 14px;gap:10px}
@@ -439,18 +442,22 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   .band-inner{padding-left:18px}
   .statement{margin-top:32px;margin-bottom:32px;padding-top:20px;padding-bottom:20px}
   .decision-statement{font-size:20px;line-height:1.38}
-  .measure-break{padding-left:24px;padding-right:24px}
-  .measure-break h2{font-size:clamp(32px,8.7vw,38px);line-height:1.08}
-  .measure-ruler{grid-template-columns:1fr;gap:0;margin:44px 0 50px;padding:0 0 0 56px}
-  .measure-ruler:before{inset:0 auto 0 0;width:28px;height:auto;border-top:0;border-left:2px solid rgba(129,70,63,.72);
-    background-image:linear-gradient(to bottom,rgba(129,70,63,.38) 1px,transparent 1px),linear-gradient(to bottom,var(--wine) 2px,transparent 2px);
-    background-size:11px 12.5%,27px 25%;background-repeat:repeat-y}
-  .measure-ruler:after{top:auto;right:auto;bottom:0;left:0;width:28px;height:2px}
-  .measure-ruler li{min-height:0;padding:18px 0 22px;text-align:left}
-  .measure-ruler li+li{border-left:0;border-top:1px solid rgba(129,70,63,.14)}
-  .measure-ruler li:before{top:50%;left:-61px;transform:translateY(-50%)}
-  .measure-number{margin-bottom:4px}
-  .measure-copy-lead{font-size:20px;line-height:1.45}
+  .read-intro,.read-results{padding-left:20px;padding-right:20px}
+  .read-copy h2{font-size:clamp(30px,8.4vw,36px)}
+  .read-sub{font-size:20px;margin-bottom:30px}
+  .read-questions li{padding-left:44px}
+  .read-facts{font-size:20px}
+  .read-results h2{font-size:clamp(30px,8.4vw,37px)}
+  .read-result-scale{grid-template-columns:1fr;margin:46px 0 42px;padding:0 0 0 50px;border-top:0;border-left:2px solid rgba(129,70,63,.7)}
+  .read-result{padding:24px 0 30px 18px}
+  .read-result:first-child{padding:0 0 30px 18px}
+  .read-result:last-child{padding:24px 0 0 18px}
+  .read-result+.read-result{border-left:0;border-top:1px solid rgba(129,70,63,.16)}
+  .read-result:before,.read-result:first-child:before{top:30px;left:-58px}
+  .read-result:first-child:before{top:6px}
+  .read-result h3{font-size:14px}
+  .read-result p{font-size:14px}
+  .read-result-notes{grid-template-columns:1fr;gap:24px;padding-top:28px}
   .proof-collage{overflow:hidden}
   .proof-collage img{width:100%;height:auto;max-width:100%}
   .proof-conclusion .statement{font-size:clamp(22px,6.2vw,25px);line-height:1.38}
@@ -493,6 +500,19 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   .mechanism-intro{padding-left:20px;padding-right:20px}
   .mechanism-intro h2{font-size:clamp(31px,8.6vw,37px);line-height:1.08}
   .mechanism-badge{font-size:10px;letter-spacing:.1em}
+  .offer-intro{padding-left:20px;padding-right:20px}
+  .offer-intro h2{font-size:clamp(30px,8.5vw,36px);margin-bottom:28px}
+  .offer-intro-copy,.offer-conclusion-copy{font-size:14px}
+  .offer-method{padding-left:20px;padding-right:20px}
+  .offer-steps{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(276px,84vw);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-inline:contain;padding:0 2px 14px;scrollbar-width:none}
+  .offer-steps::-webkit-scrollbar{display:none}
+  .offer-step{padding:30px 26px;scroll-snap-align:start}
+  .offer-step-number{font-size:34px;margin-bottom:18px}
+  .offer-step h3{min-height:0;margin-bottom:18px;font-size:17px}
+  .offer-step p{font-size:14px;line-height:1.62}
+  .offer-conclusion{padding-left:20px;padding-right:20px}
+  .offer-outcomes{font-size:clamp(25px,7.2vw,31px)}
+  .offer-manifesto{font-size:clamp(23px,6.8vw,29px)}
 }
 @media (max-width:360px){
   .brand{font-size:12px;letter-spacing:.055em}
@@ -673,62 +693,96 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
 </section>
 
 <!-- 5 ANGEBOT -->
-<section class="section">
-  <div class="offer-head">
-    <div class="offer-copy">
-      <p class="kicker">Das bekommst du</p>
-      <h2>NEXT ONE ist kein Dating-Kurs.<br><span class="wine">NEXT ONE ist die Woche, die dir ein Jahr spart.</span></h2>
-      <ul class="meta-line">
-        <li>7 Tage</li><li>7 Audios</li><li>Zehn Minuten am Tag</li><li>Und du entscheidest</li>
-      </ul>
-      <div class="reasons">
-        <p><b>Audio,</b> weil du es beim Anziehen hörst.</p>
-        <p><b>Morgens,</b> weil die Aufgabe dann den ganzen Tag Zeit hat.</p>
-        <p><b>7 Tage,</b> weil du nach zwei noch nichts entschieden hast und nach dreißig aufgegeben hättest.</p>
-      </div>
+<section class="offer-intro">
+  <div class="offer-intro-inner">
+    <p class="kicker">Das bekommst du</p>
+    <h2><strong>NEXT ONE ist kein Kurs über Männer.</strong><em>Es sind 7 Tage, nach denen du anders auf einen Mann schaust.</em></h2>
+    <div class="offer-intro-copy">
+      <p>Nicht mehr darauf, was er meinen könnte. Darauf, was da ist.</p>
+      <p>In 7 Audios gehst du durch die drei Fragen, die du brauchst, wenn du einen Mann willst und anfängst, Dinge schönzureden:</p>
     </div>
-    <figure class="section-media"><img src="next-one-story.jpg" alt="Angelika begleitet Frauen durch ihre NEXT ONE Woche" loading="lazy" decoding="async"></figure>
-  </div>
-
-  <div class="three">
-    <div>Was will ich?</div><div>Was bietet er an?</div><div>Passt das zusammen?</div>
-  </div>
-
-</section>
-
-<!-- 6 MASSSTAB -->
-<section class="section tool">
-  <div class="tool-inner">
-    <div class="tool-copy">
-      <p class="kicker">Dazu bekommst du</p>
-      <h2>Dein Maßstab</h2>
-      <p class="sub">Zwei Minuten. Auf deinem Handy. Für jeden Abend, an dem dein Nein weich wird.</p>
-      <h2 style="font-size:clamp(24px,3.2vw,38px)">Das ist kein Workbook. Das ist der Satz, den du meintest, bevor du angefangen hast, ihn wegzuerklären.</h2>
-      <p>Heute schreibst du auf, was du willst. Und die drei Dinge, bei denen du nicht feilschst.</p>
-      <p>In vier Monaten sitzt du wieder auf dem Sofa und denkst: <em>Vielleicht sehe ich das gerade zu streng.</em></p>
-      <p>Dann öffnest du deinen Maßstab. Und liest deinen eigenen Satz. Mit Datum.</p>
-      <p><strong>Er war dabei, als du klar warst. Und er erinnert sich besser als du.</strong></p>
-    </div>
-    <figure class="section-media"><img src="assets/handy-2.jpg" alt="Frau öffnet den persönlichen Maßstab auf ihrem Smartphone" loading="lazy" decoding="async"></figure>
   </div>
 </section>
 
-<!-- 7 MASSSTAB-FORTSETZUNG -->
-<section class="measure-break" aria-labelledby="measure-title">
-  <div class="measure-break-inner">
-    <h2 id="measure-title">Ein Maßstab misst. Er diskutiert nicht.</h2>
-    <ol class="measure-ruler" aria-label="Die vier Messpunkte deines persönlichen Maßstabs">
-      <li><span class="measure-number">01</span><strong>Dein Ziel</strong></li>
-      <li><span class="measure-number">02</span><strong>Deine K.O.-Kriterien</strong></li>
-      <li><span class="measure-number">03</span><strong>Sein Wortlaut</strong></li>
-      <li><span class="measure-number">04</span><strong>Deine „ja, aber“-Sätze</strong></li>
-    </ol>
-    <div class="measure-copy">
-      <p class="measure-copy-lead">Und wenn du unsicher wirst, beantwortest du vier Fragen. Zwei Minuten später weißt du, ob das, was du willst, und das, was da ist, zusammenpassen.</p>
-      <div class="measure-copy-detail">
-        <p>Ein Link auf deinem Handy. Kein Download, kein Ausdrucken, kein Passwort. Alles bleibt auf deinem Gerät, <strong>weil</strong> niemand außer dir lesen muss, was du über deine Beziehung schreibst.</p>
-        <p><strong>Und er bleibt dir.</strong> Du wirst ihn wieder aufmachen. Vielleicht nächsten Monat, vielleicht in zwei Jahren. Der Maßstab bleibt derselbe. Du hast ihn ja festgelegt.</p>
-      </div>
+<section class="offer-method" aria-label="Die drei Fragen von NEXT ONE">
+  <div class="offer-method-inner">
+    <div class="offer-steps">
+      <article class="offer-step">
+        <span class="offer-step-number">01</span>
+        <h3>Was will ICH?</h3>
+        <p>Bevor du auf ihn schaust, schaust du auf dich. Willst du eine Beziehung? Kinder? Eine gemeinsame Zukunft? Und wo verhandelst du nicht?</p>
+        <p>Das legst du fest, bevor deine Gefühle anfangen, es für diesen einen Mann zu verschieben.</p>
+      </article>
+      <article class="offer-step">
+        <span class="offer-step-number">02</span>
+        <h3>Was bietet ER mir an?</h3>
+        <p>Jetzt hörst du auf, seine Nachrichten zu deuten. Du schaust auf das, was passiert. Plant er mit dir? Wird er konkret? Passen seine Worte zu seinem Verhalten?</p>
+        <p>Und du lernst, wie du früh fragst, ohne aus dem ersten Kaffee ein Bewerbungsgespräch zu machen.</p>
+      </article>
+      <article class="offer-step">
+        <span class="offer-step-number">03</span>
+        <h3>Passt das zusammen?</h3>
+        <p>Die Frage, die du bisher immer vertagt hast: Reicht dir das?</p>
+        <p>Nicht deiner Freundin. Nicht Instagram. Dir.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="offer-conclusion">
+  <div class="offer-conclusion-inner">
+    <p class="offer-outcomes">Vielleicht lautet deine Antwort: <strong>Ja. THIS ONE.</strong><br>Vielleicht lautet sie: <strong>Nein. NEXT ONE.</strong><br>Beides ist eine Antwort. Und genau darum geht es.</p>
+    <p class="offer-manifesto">7 TAGE. 7 AUDIOS. EINE ENTSCHEIDUNG, DIE DEINE IST.</p>
+    <div class="offer-conclusion-copy">
+      <p>Du bekommst nicht sieben weitere Dinge zum Nachdenken. Du gehst sieben Tage lang durch dieselben drei Fragen, bis sie sitzen: Was will ich? Was bietet er an? Passt das zusammen?</p>
+      <p>Damit du beim nächsten „Mal schauen“ nicht drei Monate rätselst, was er gemeint haben könnte.<br>Damit du weißt, was du damit machst.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6 NEXT ONE READ -->
+<section class="read-intro">
+  <div class="read-intro-inner">
+    <div class="read-copy">
+      <p class="kicker">Ein fetter Bonus</p>
+      <h2>Dein erster NEXT ONE READ ist dabei.</h2>
+      <p class="read-sub">Bring den Mann mit, bei dem du gerade nicht mehr weißt, was Fakt ist und was Hoffnung.</p>
+      <p>Er schreibt: „Lass uns nächste Woche mal schauen.“ Du liest es dreimal. Dann schickst du es deiner Freundin. Sie schreibt: „Klingt doch gut?“ Und du merkst, sie weiß es auch nicht.</p>
+      <p>Der READ liest mit dir. Du gibst seine Nachricht ein oder beschreibst kurz, was zwischen euch passiert ist. Dann beantwortest du fünf Fragen:</p>
+      <ol class="read-questions">
+        <li>Was wünschst du dir mit diesem Mann?</li>
+        <li>Was hat er gesagt?</li>
+        <li>Was hat er getan?</li>
+        <li>Welche Bedeutung gibst du dem?</li>
+        <li>Welche Antwort hoffst du insgeheim?</li>
+      </ol>
+      <p class="read-facts">Danach liegen vier Dinge nebeneinander, die in deinem Kopf sonst ineinanderlaufen:<br><strong>Was du willst. Was er sagt. Was er tut. Was du daraus machst.</strong></p>
+    </div>
+    <figure class="read-media"><img src="assets/handy-2.jpg" alt="Frau öffnet ihren persönlichen NEXT ONE READ auf dem Smartphone" loading="lazy" decoding="async"></figure>
+  </div>
+</section>
+
+<!-- 7 NEXT ONE READ ERGEBNIS -->
+<section class="read-results" aria-labelledby="read-results-title">
+  <div class="read-results-inner">
+    <h2 id="read-results-title">Am Ende steht eins von drei Ergebnissen.</h2>
+    <div class="read-result-scale">
+      <article class="read-result">
+        <h3>Deckt sich.</h3>
+        <p>Seine Worte und sein Verhalten decken sich gerade mit dem, was du willst.</p>
+      </article>
+      <article class="read-result">
+        <h3>Noch offen.</h3>
+        <p>Für eine klare Antwort fehlt etwas. Der READ sagt dir, was: eine Aussage, eine Handlung oder ein Zeitraum. Damit du weißt, worauf du wartest. Und wie lange du das willst.</p>
+      </article>
+      <article class="read-result">
+        <h3>Deckt sich nicht.</h3>
+        <p>Was er gerade sagt und tut, liegt unter dem, was du willst.</p>
+      </article>
+    </div>
+    <div class="read-result-notes">
+      <p>Dazu siehst du, wo seine Worte und seine Taten auseinandergehen. Und an welcher Stelle du die Lücke gerade mit Hoffnung füllst.</p>
+      <p>Der READ sagt dir nicht, was du ihm antworten sollst. Er sagt dir nicht, ob er ein guter Mann ist. Er zeigt dir, was gerade auf dem Tisch liegt. Was du damit machst, bleibt bei dir.</p>
     </div>
   </div>
 </section>
