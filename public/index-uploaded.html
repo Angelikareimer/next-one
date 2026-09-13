@@ -45,7 +45,9 @@ a{color:inherit}
 .hero-inner{padding:clamp(48px,6vw,96px) clamp(32px,7vw,112px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;position:relative;z-index:2}
 .hero-inner:before{content:"";display:block;width:48px;height:2px;background:var(--gold);margin-bottom:26px}
 .hero-label{font-size:11px;font-weight:900;letter-spacing:.3em;text-transform:uppercase;color:var(--wine);margin:0 0 16px}
-.hero h1{font-size:clamp(34px,3.6vw,54px);line-height:1.06;letter-spacing:-.025em;max-width:15ch;margin-bottom:24px}
+.hero h1{font-size:clamp(32px,3.2vw,49px);line-height:1.06;letter-spacing:-.025em;max-width:16ch;margin-bottom:24px}
+.hero-title-turn{display:block;margin-top:.12em;font-style:italic}
+.hero-title-turn .wine{color:var(--wine)}
 .hero .lede{max-width:46ch;font-size:clamp(17px,1.3vw,19px)}
 .hero-action{margin-top:10px;width:min(480px,100%)}
 .hero-action .button{width:100%}
@@ -387,9 +389,16 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   body{font-size:18px;line-height:1.68}
   .hero{min-height:0}
   .hero-shell{grid-template-columns:1fr}
-  .hero-media{order:-1;aspect-ratio:4/3.1}
+  .hero-media{order:-1;aspect-ratio:16/10}
   .hero-media:after{background:linear-gradient(180deg,rgba(248,245,240,0) 40%,rgba(248,245,240,.9) 88%,var(--paper) 100%)}
-  .hero-inner{padding:34px 24px 48px}
+  .hero-inner{padding:24px 24px 42px}
+  .hero-inner:before{margin-bottom:18px}
+  .hero-label{margin-bottom:12px}
+  .hero h1{font-size:clamp(30px,8.4vw,36px);max-width:17ch;margin-bottom:18px}
+  .hero-title-turn{margin-top:.08em}
+  .hero .lede{font-size:16px;line-height:1.55;margin-bottom:18px}
+  .hero-action{margin-top:0}
+  .hero .click-reassurance{font-size:12.5px;line-height:1.45}
   .section-inner,.section-inner.reverse,.about-layout{grid-template-columns:1fr;gap:36px}
   .decision-section .section-inner{grid-template-columns:1fr;gap:36px}
   .story-echo .section-inner{grid-template-columns:1fr;gap:36px}
@@ -401,6 +410,7 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   .section-inner.reverse .section-copy{order:1}
   .about-layout .section-copy{order:2}
   .about-visual{order:1}
+  .saturday-scene .section-copy{font-size:17px;line-height:1.62}
   .about-portrait{aspect-ratio:4/4.5;min-height:520px;width:100%}
   .press-group img{width:480px;height:100px}
   .band-inner{padding-left:22px}
@@ -486,7 +496,7 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   <div class="hero-shell">
     <div class="hero-inner">
       <p class="hero-label">Next One</p>
-      <h1>In 7 Tagen weißt du, was er dir anbietet. Und ob du das nimmst.</h1>
+      <h1>In 7 Tagen weißt du, was er dir anbietet.<em class="hero-title-turn">Und ob <span class="wine">du</span> das <span class="wine">nimmst</span>.</em></h1>
       <p class="lede">7 Audios. 7 Tage. Start am 19. September.<br>
         Ob ihr euch seit drei Wochen kennt oder seit drei Jahren.</p>
       <div class="hero-action">
@@ -495,8 +505,8 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
       </div>
       <p class="damit">NEXT ONE zeigt dir in 7 Tagen, was er dir anbietet. Damit du nicht noch ein Jahr wartest, ohne eine Antwort zu bekommen.</p>
       <div class="authority">
-        <img src="assets/mindfuck-coach-siegel.png" alt="Siegel: ausgebildeter MindFuck Coach">
-        <span>Als MindFuck Coach habe ich in 10 Jahren über 500 Frauen begleitet. Ausgebildet in Positiver Psychologie und Embodiment.</span>
+        <img src="assets/mindfuck-coach-siegel.png" alt="Siegel für zertifizierte MINDFUCK®-Coachs">
+        <span>Als eine der MINDFUCK®-Coachs habe ich in 10 Jahren über 500 Frauen begleitet. Ausgebildet in Positiver Psychologie und Embodiment.</span>
       </div>
     </div>
     <figure class="hero-media"><img src="next-one-hero.jpg" alt="Frau schaut am Fenster auf ihr Handy"></figure>
@@ -533,7 +543,7 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
 </section>
 
 <!-- 1 SAMSTAG -->
-<section class="section">
+<section class="section saturday-scene">
   <div class="section-inner">
     <div class="section-copy">
       <h2>Du hältst dir den Samstag frei.</h2>
@@ -555,13 +565,13 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
 <section class="section story-echo">
   <div class="section-inner">
     <div class="story-quote">
-      <p>Dann schickst du deiner Freundin eine 7 Minuten lange Sprachnachricht, um zu klären, wie er das gemeint hat. Sie hört sie sich an. Sie weiß es auch nicht.</p>
+      <p>Dann schickst du deiner Freundin eine 7:03 Minuten lange Sprachnachricht, um zu klären, wie er das gemeint hat. Sie hört sie sich an. Sie weiß es auch nicht.</p>
       <p>Und irgendwann zwischen acht und zehn passiert das, was du längst kennst.</p>
       <p class="statement">Aus <strong>„Das reicht mir nicht"</strong> wird wieder <strong>„Vielleicht erwarte ich zu viel."</strong></p>
       <blockquote><p>„Das ist für mich halt No-Go eigentlich. Es ist ein No-Go, aber ich bin dann immer noch so, ja, dann habe ich es halt gemacht."</p></blockquote>
       <p class="tight">Lies den Satz nochmal.</p>
       <p>Sie kennt ihre Grenze. Und übergeht sie im selben Satz.</p>
-      <p><strong>Genau da sitzt es.</strong></p>
+      <p><strong>Genau das ist das Problem.</strong></p>
     </div>
     <figure class="section-media"><img src="next-one-voice-message-703.png" alt="Smartphone mit einer 7:03 Minuten langen Sprachnachricht" loading="lazy" decoding="async"></figure>
   </div>
@@ -810,7 +820,7 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
     <div class="about-visual">
       <figure class="about-portrait"><img src="next-one-portrait.jpg" alt="Angelika Reimer" loading="lazy" decoding="async"></figure>
       <div class="about-stat"><strong>500+</strong><span>Frauen begleitet</span></div>
-      <img class="about-seal" src="assets/mindfuck-coach-siegel.png" alt="Zertifizierter MindFuck Coach" loading="lazy" decoding="async">
+      <img class="about-seal" src="assets/mindfuck-coach-siegel.png" alt="Siegel für zertifizierte MINDFUCK®-Coachs" loading="lazy" decoding="async">
     </div>
     <div class="section-copy">
       <p class="kicker">Über mich</p>
@@ -821,7 +831,7 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
     </div>
   </div>
   <div class="credentials-row">
-    <article class="credential"><h3>MindFuck Coach</h3><p>Weil genau da, wo aus „Das reicht mir nicht" wieder „Vielleicht erwarte ich zu viel" wird, ein Gedanke sich selbst überschreibt. Das ist die Stelle, an der ich arbeite.</p></article>
+    <article class="credential"><h3>MINDFUCK®-Coachs</h3><p>Weil genau da, wo aus „Das reicht mir nicht" wieder „Vielleicht erwarte ich zu viel" wird, ein Gedanke sich selbst überschreibt. Das ist die Stelle, an der ich arbeite.</p></article>
     <article class="credential"><h3>Positive Psychologie</h3><p>Weil ich dich nicht frage, was mit dir nicht stimmt. Ich frage dich, welche Beziehung du willst.</p></article>
     <article class="credential"><h3>Embodiment</h3><p>Weil du um 22:17 Uhr längst weißt, was richtig wäre. Und es trotzdem schwer wird.</p></article>
   </div>
