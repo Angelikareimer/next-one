@@ -928,5 +928,46 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   <p class="disclaimer">This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
 </footer>
 
+<script src="/site-notices.js"></script>
+<script>
+TMFSocialProof.init({
+  siteId: "next-one",
+  position: "bottom-right",
+  delayMs: 5000,
+  displayDurationMs: 6500,
+  maxPerSession: 1,
+  messages: [
+    {title: "Eine Teilnehmerin schreibt", text: "Ich habe endlich meine ehrliche Meinung geäußert. Es kam keine Reaktion. Aber ich habe mich viel leichter gefühlt."},
+    {title: "Eine Teilnehmerin schreibt", text: "Keine Antwort ist oft die klarste Antwort. Die Stille gibt mir bereits Klarheit."},
+    {title: "Eine Teilnehmerin schreibt", text: "Ich nehme vor allem mit, mich immer zu fragen: Warum will ich gerade, dass er mir schreibt?"}
+  ]
+});
+</script>
+<script src="/consent-manager.js"></script>
+<script>
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+TMFConsent.init({
+  cookieDomain: "",
+  version: "2026-09-13",
+  showSettingsButton: true,
+  services: {
+    anyTrackUrl: "https://assets.anytrack.io/RDHNIBqg8pTP.js",
+    analyticsScripts: [{src: "/_vercel/insights/script.js", id: "tmf-vercel-analytics"}]
+  }
+});
+
+document.querySelectorAll('a[href*="/order-next-one"]').forEach(function (cta, index) {
+  cta.addEventListener("click", function () {
+    var locationName = cta.closest("section") ? cta.closest("section").className : "navigation";
+    var consent = TMFConsent.getConsent() || {};
+    var data = {product: "NEXT ONE", location: locationName, position: index + 1};
+    if (consent.analytics) window.va("event", {name: "Checkout Click", data: data});
+    if (consent.marketing && typeof window.AnyTrack === "function") {
+      window.AnyTrack("trigger", "InitiateCheckout", data);
+    }
+  });
+});
+</script>
+
 </body>
 </html>
