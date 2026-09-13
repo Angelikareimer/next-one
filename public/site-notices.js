@@ -70,7 +70,7 @@
     function show() {
       root.innerHTML = '<span class="tmf-proof__mark" aria-hidden="true">M</span><div class="tmf-proof__content"><strong class="tmf-proof__title"></strong><p class="tmf-proof__text"></p></div>' +
         (config.showCloseButton ? '<button type="button" class="tmf-proof__close" aria-label="Hinweis schließen">×</button>' : '');
-      root.querySelector(".tmf-proof__title").textContent = message.title || "Eine Teilnehmerin schreibt";
+      root.querySelector(".tmf-proof__title").textContent = message.title || "Eine Kundin schreibt";
       root.querySelector(".tmf-proof__text").textContent = message.text;
       var close = root.querySelector(".tmf-proof__close");
       if (close) close.addEventListener("click", hide);
