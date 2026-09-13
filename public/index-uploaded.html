@@ -946,18 +946,24 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   <p class="disclaimer">This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.</p>
 </footer>
 
-<script src="/site-notices.js"></script>
+<script src="/site-notices.js?v=3"></script>
 <script>
 TMFSocialProof.init({
   siteId: "next-one",
   position: "bottom-right",
   delayMs: 5000,
   displayDurationMs: 6500,
-  maxPerSession: 1,
+  intervalMs: 4500,
+  maxPerSession: 12,
+  purchaseMessagesUrl: "/api/social-proof",
+  purchasePollMs: 30000,
   messages: [
-    {title: "Eine Kundin schreibt", text: "Ich habe endlich meine ehrliche Meinung geäußert. Es kam keine Reaktion. Aber ich habe mich viel leichter gefühlt."},
-    {title: "Eine Kundin schreibt", text: "Keine Antwort ist oft die klarste Antwort. Die Stille gibt mir bereits Klarheit."},
-    {title: "Eine Kundin schreibt", text: "Ich nehme vor allem mit, mich immer zu fragen: Warum will ich gerade, dass er mir schreibt?"}
+    {id: "testimonial-1", type: "testimonial", title: "Eine Kundin schreibt", text: "Erkenntnis: wie stark man sich fühlt, wenn man einfach mal nicht antwortet und sich dadurch die ganze Energie ändert 💪"},
+    {id: "testimonial-2", type: "testimonial", title: "Eine Kundin schreibt", text: "Ich habe endlich meine ehrliche Meinung geäußert, es kam keine Reaktion – aber ich habe mich viel leichter gefühlt 💪"},
+    {id: "testimonial-3", type: "testimonial", title: "Eine Kundin schreibt", text: "Keine Antwort ist oft die klarste Antwort. Und dass die Stille mir bereits Klarheit gibt. Vor allem nehme ich mit, dass ich einen Mann an meiner Seite haben möchte, der klar in seinen Werten ist und dessen Taten dies auch widerspiegeln."},
+    {id: "testimonial-4", type: "testimonial", title: "Eine Kundin schreibt", text: "Ich nehme vor allem mit, mich immer zu fragen: Warum will ich gerade, dass er mir schreibt? Weil ich eine Bestätigung benötige? Oder worum geht es?"},
+    {id: "testimonial-5", type: "testimonial", title: "Eine Kundin schreibt", text: "Den eigenen Wert wieder erkennen und sich immer wieder sagen, dass es nicht an mir liegt!"},
+    {id: "testimonial-6", type: "testimonial", title: "Eine Kundin schreibt", text: "Ich habe gelernt, dass ein ängstlicher Typ und ein vermeidender Typ nicht zusammenpassen. Und dass man zuerst sich selbst lieben lernen sollte."}
   ]
 });
 </script>
