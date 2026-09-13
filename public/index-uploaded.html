@@ -236,7 +236,13 @@ blockquote p{margin:0;max-width:none}
 .proof-collage img{width:100%;height:auto}
 .proof-conclusion{max-width:1100px;margin:clamp(42px,6vw,72px) 0 0}
 .proof-conclusion .statement{max-width:none;font-size:clamp(27px,3.2vw,46px);line-height:1.34}
-.proof-conclusion>p:last-child{max-width:70ch;font-size:clamp(17px,1.5vw,20px)}
+.proof-conclusion>p{max-width:70ch;font-size:clamp(17px,1.5vw,20px)}
+.proof-intro h2 strong{font-weight:650}
+.proof-intro h2 em{display:block;margin-top:.12em;color:var(--wine);font-weight:400}
+.proof-quote-label{margin-top:clamp(38px,5vw,58px);margin-bottom:10px;font-weight:750}
+.proof-quote{max-width:760px;margin:0 0 clamp(38px,5vw,58px);background:rgba(255,253,249,.72)}
+.proof-shift{max-width:900px!important}
+.proof-closing{margin-bottom:0!important}
 
 /* KLARSTELLUNG */
 .clarity-section{background:var(--paper3)!important;padding:clamp(48px,6vw,88px) clamp(24px,6.5vw,96px)}
@@ -808,15 +814,19 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
 <section class="section proof-section">
   <div class="proof-layout">
     <div class="proof-intro">
-      <p class="kicker">Was Frauen schreiben</p>
-      <h2>Nach einer Woche klingt Klarheit so.</h2>
+      <p class="kicker">Nach den 7 Tagen</p>
+      <h2><strong>Manchmal ist die Antwort nicht die, die du dir gewünscht hast.</strong><em>Endlich hast du eine.</em></h2>
     </div>
     <figure class="proof-collage">
       <img src="assets/testimonials.jpg" alt="Collage aus sechs anonymisierten Nachrichten von Teilnehmerinnen über Klarheit, Selbstwert und ehrliche Kommunikation" loading="lazy" decoding="async">
     </figure>
     <div class="proof-conclusion">
-      <p class="statement">Sie hat nicht bekommen, was sie wollte. <strong>Sie hat bekommen, was sie brauchte: eine Antwort.</strong></p>
-      <p>Und eine andere Frau schrieb: „Ich nehme vor allem mit, mich immer zu fragen: Warum will ich gerade, dass er mir schreibt?"</p>
+      <p class="statement"><b>Sie hat nicht bekommen, was sie wollte.</b> <strong>Sie hat bekommen, was sie brauchte: eine Antwort.</strong></p>
+      <p>Und genau darum geht es. Ob er sich für dich entscheidet, liegt nicht in deiner Hand. Ob du noch Monate brauchst, um zu entscheiden, was du mit seinem Angebot machst, schon.</p>
+      <p class="proof-quote-label">Eine andere Teilnehmerin:</p>
+      <blockquote class="proof-quote"><p>„Ich nehme vor allem mit, mich immer zu fragen: Warum will ich gerade, dass er mir schreibt?"</p></blockquote>
+      <p class="statement proof-shift">Aus „Warum schreibt er nicht?"<br>wird <strong>„Warum brauche ich gerade seine Nachricht?"</strong></p>
+      <p class="proof-closing">Das ist der Moment, in dem du aufhörst, nur ihn zu beobachten. Und wieder anfängst, dir selbst zuzuhören.</p>
     </div>
   </div>
 </section>
