@@ -45,10 +45,15 @@ a{color:inherit}
 .hero-inner{padding:clamp(48px,6vw,96px) clamp(32px,7vw,112px);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;position:relative;z-index:2}
 .hero-inner:before{content:"";display:block;width:48px;height:2px;background:var(--gold);margin-bottom:26px}
 .hero-label{font-size:11px;font-weight:900;letter-spacing:.3em;text-transform:uppercase;color:var(--wine);margin:0 0 16px}
-.hero h1{font-size:clamp(32px,3.2vw,49px);line-height:1.06;letter-spacing:-.025em;max-width:16ch;margin-bottom:24px}
+.hero h1{font-size:clamp(32px,3.2vw,49px);line-height:1.06;letter-spacing:-.025em;max-width:19ch;margin-bottom:16px}
 .hero-title-turn{display:block;margin-top:.12em;font-style:italic}
 .hero-title-turn .wine{color:var(--wine)}
 .hero .lede{max-width:46ch;font-size:clamp(17px,1.3vw,19px)}
+.hero-subline{max-width:38ch;margin:0 0 24px;font-family:Playfair,Georgia,serif;font-size:clamp(19px,1.7vw,24px);font-style:italic;line-height:1.35;color:var(--wine)}
+.hero-body{max-width:54ch;font-size:clamp(15px,1.15vw,17px);line-height:1.58}
+.hero-body p{margin-bottom:16px}
+.hero-questions{display:grid;gap:2px;margin:4px 0 18px;padding:10px 0 10px 18px;border-left:2px solid var(--gold);font-weight:750}
+.hero-questions span{display:block}
 .hero-action{margin-top:10px;width:min(480px,100%)}
 .hero-action .button{width:100%}
 .click-reassurance{margin:12px 0 0;font-size:13.5px;color:var(--muted)}
@@ -397,6 +402,10 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   .hero h1{font-size:clamp(30px,8.4vw,36px);max-width:17ch;margin-bottom:18px}
   .hero-title-turn{margin-top:.08em}
   .hero .lede{font-size:16px;line-height:1.55;margin-bottom:18px}
+  .hero-subline{margin-bottom:20px;font-size:19px}
+  .hero-body{font-size:16px;line-height:1.55}
+  .hero-body p{margin-bottom:15px}
+  .hero-questions{margin-bottom:17px}
   .hero-action{margin-top:0}
   .hero .click-reassurance{font-size:12.5px;line-height:1.45}
   .hero .damit{margin-top:18px;padding-top:16px;font-size:14px;line-height:1.46}
@@ -504,14 +513,18 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   <div class="hero-shell">
     <div class="hero-inner">
       <p class="hero-label">Next One</p>
-      <h1>In 7 Tagen weißt du, was er dir anbietet.<em class="hero-title-turn">Und ob <span class="wine">du</span> das <span class="wine">nimmst</span>.</em></h1>
-      <p class="lede">7 Audios. 7 Tage. Start am 19. September.<br>
-        Ob ihr euch seit drei Wochen kennt oder seit drei Jahren.</p>
+      <h1>In sieben Tagen weißt du, was er dir anbietet.</h1>
+      <p class="hero-subline">Damit aus „mal schauen“ nicht noch ein Jahr wird.</p>
+      <div class="hero-body">
+        <p>Du hast genug Screenshots an deine Freundin geschickt. Drei Fragen reichen:</p>
+        <p class="hero-questions"><span>Was will ich?</span><span>Was bietet er an?</span><span>Passt das zusammen?</span></p>
+        <p>Sieben Audios, eins pro Tag. Kurz genug für den Morgen vor der Arbeit.</p>
+        <p>Für die erste Verabredung. Für die Wochen, in denen du auf sein Zeichen wartest. Für die Jahre, in denen du längst wissen willst: Woran bin ich?</p>
+      </div>
       <div class="hero-action">
         <a class="button" href="https://www.themagneticfemme.co/order-next-one">Ja, ich will es wissen →</a>
         <p class="click-reassurance">37 € einmalig · Start am 19. September · Dauerhafter Zugang</p>
       </div>
-      <p class="damit">NEXT ONE zeigt dir in 7 Tagen, was er dir anbietet. Damit du nicht noch ein Jahr wartest, ohne eine Antwort zu bekommen.</p>
       <div class="authority">
         <img src="assets/mindfuck-coach-siegel.png" alt="Siegel für zertifizierte MINDFUCK®-Coachs">
         <span>Als eine der MINDFUCK®-Coachs habe ich in 10 Jahren über 500 Frauen begleitet. Ausgebildet in Positiver Psychologie und Embodiment.</span>
