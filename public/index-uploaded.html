@@ -317,6 +317,7 @@ blockquote p{margin:0;max-width:none}
 .authority-story-grid>div{max-width:56ch}
 .authority-story .big{font-size:clamp(62px,9vw,118px);line-height:.9;margin:42px 0 0}
 .authority-story-grid>div:last-child{padding-top:8px}
+.authority-story-close{margin:clamp(54px,7vw,82px) 0 0;max-width:38ch}
 
 /* MOPS */
 .mops{background:var(--paper)!important}
@@ -516,15 +517,14 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
   .offer-intro h2{font-size:clamp(30px,8.5vw,36px);margin-bottom:28px}
   .offer-intro-copy,.offer-conclusion-copy{font-size:14px}
   .offer-method{padding-left:20px;padding-right:20px}
-  .offer-steps{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(276px,84vw);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-inline:contain;padding:0 2px 14px;scrollbar-width:none}
-  .offer-steps::-webkit-scrollbar{display:none}
-  .offer-step{padding:30px 26px;scroll-snap-align:start}
+  .offer-steps{grid-template-columns:1fr;grid-auto-flow:row;gap:14px;overflow:visible;padding:0}
+  .offer-step{padding:30px 26px}
   .offer-step-number{font-size:34px;margin-bottom:18px}
   .offer-step h3{min-height:0;margin-bottom:18px;font-size:17px}
   .offer-step p{font-size:14px;line-height:1.62}
   .offer-conclusion{padding-left:20px;padding-right:20px}
-  .offer-outcomes{font-size:clamp(25px,7.2vw,31px)}
-  .offer-manifesto{font-size:clamp(23px,6.8vw,29px)}
+  .offer-outcomes{font-size:clamp(21px,6.2vw,26px)}
+  .offer-manifesto{font-size:clamp(20px,5.8vw,24px)}
 }
 @media (max-width:360px){
   .brand{font-size:12px;letter-spacing:.055em}
@@ -895,15 +895,14 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
     <div class="section-copy">
       <p class="kicker">Über mich</p>
       <h2>Hi, ich bin Angelika.</h2>
-      <p>Seit über 10 Jahren arbeite ich mit Frauen an genau diesem Moment:</p>
-      <p class="statement"><strong>„Das reicht mir nicht."</strong><br>Fünf Minuten später: <em>„Vielleicht erwarte ich einfach zu viel."</em></p>
+      <p>Seit über 10 Jahren arbeite ich mit Frauen an genau diesem Moment: „Das reicht mir nicht." Fünf Minuten später: „Vielleicht erwarte ich zu viel."</p>
       <p>Über 500 Frauen habe ich begleitet. Und ich habe drei Ausbildungen, die genau an dieser Stelle zusammenspielen.</p>
     </div>
   </div>
   <div class="credentials-row">
-    <article class="credential"><h3>MINDFUCK®-Coachs</h3><p>Weil genau da, wo aus „Das reicht mir nicht" wieder „Vielleicht erwarte ich zu viel" wird, ein Gedanke sich selbst überschreibt. Das ist die Stelle, an der ich arbeite.</p></article>
-    <article class="credential"><h3>Positive Psychologie</h3><p>Weil ich dich nicht frage, was mit dir nicht stimmt. Ich frage dich, welche Beziehung du willst.</p></article>
-    <article class="credential"><h3>Embodiment</h3><p>Weil du um 22:17 Uhr längst weißt, was richtig wäre. Und es trotzdem schwer wird.</p></article>
+    <article class="credential"><h3>MINDFUCK®-COACH</h3><p>Weil aus einem klaren „Das reicht mir nicht." in fünf Minuten wieder „Vielleicht erwarte ich zu viel." wird. Ich zeige dir die Stelle, an der du deine eigene Antwort überschreibst.</p></article>
+    <article class="credential"><h3>POSITIVE PSYCHOLOGIE</h3><p>Weil ich dich nicht frage, was mit dir nicht stimmt. Wir schauen darauf, was du willst und welche Beziehung du führen willst. Nicht darauf, wie du dich verändern musst, damit er bleibt.</p></article>
+    <article class="credential"><h3>EMBODIMENT</h3><p>Weil du um 22:17 Uhr längst weißt, dass etwas nicht passt. Und dann fängt dein Kopf an, darüber zu verhandeln. Wir bringen beides wieder zusammen.</p></article>
   </div>
 </section>
 
@@ -914,14 +913,15 @@ footer .disclaimer{max-width:62ch;margin:26px auto 0;font-size:clamp(13px,1.2vw,
     <div class="authority-story-grid">
       <div>
         <p>Und ich kenne die andere Seite selbst gut genug. Ich habe jahrelang gewartet, dass ER mir sagt, woran ich bin. Ich wusste alles über ihn. Warum er Zeit braucht. Warum ich Verständnis haben sollte. Warum dieser eine Rückzug nichts bedeutet.</p>
-        <p class="tight">Eine Person habe ich dabei ziemlich schlecht kennengelernt.</p>
+        <p class="tight">Eine Person habe ich dabei schlecht kennengelernt.</p>
         <p class="big">Mich.</p>
       </div>
       <div>
-        <p>Heute weiß ich beim ersten Kaffee, dass ich eine Beziehung will. Und ich sage es. Nicht beim fünften Date, wenn ich vorher abgecheckt habe, ob er dasselbe will. <strong>Beim ersten.</strong></p>
-        <p>Nicht weil ich weiß, dass er bleibt. Sondern weil ich keine zwei Jahre mehr brauche, um herauszufinden, ob wir dasselbe suchen.</p>
+        <p>Heute weiß ich beim ersten Kaffee, dass ich eine Beziehung will. Und ich sage es. Nicht beim fünften Treffen, wenn ich vorher abgecheckt habe, ob er dasselbe will. <strong>Beim ersten.</strong></p>
+        <p>Ob er bleibt, weiß ich dann nicht. Ich weiß nur, dass ich keine zwei Jahre mehr brauche, um herauszufinden, ob wir dasselbe suchen.</p>
       </div>
     </div>
+    <p class="statement authority-story-close">Ich analysiere nicht den Mann für dich.<br><strong>Ich bringe dich zurück zu deiner eigenen Antwort.</strong></p>
   </div>
 </section>
 
