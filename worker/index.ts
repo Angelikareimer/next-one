@@ -30,7 +30,22 @@ const worker = {
     const url = new URL(request.url);
 
     if (url.pathname === "/") {
-      return env.ASSETS.fetch(new Request(new URL("/index-uploaded.html", request.url)));
+      const assetResponse = await env.ASSETS.fetch(
+        new Request(new URL("/index-uploaded.html", request.url)),
+      );
+      const headers = new Headers(assetResponse.headers);
+      headers.set("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0");
+      headers.set("CDN-Cache-Control", "no-store");
+      headers.set("Cloudflare-CDN-Cache-Control", "no-store");
+      headers.set("Pragma", "no-cache");
+      headers.set("Expires", "0");
+      headers.set("X-Next-One-Release", "launch17-live-20260920");
+
+      return new Response(assetResponse.body, {
+        status: assetResponse.status,
+        statusText: assetResponse.statusText,
+        headers,
+      });
     }
 
     if (url.pathname === "/_vinext/image") {
