@@ -39,7 +39,7 @@ const worker = {
       headers.set("Cloudflare-CDN-Cache-Control", "no-store");
       headers.set("Pragma", "no-cache");
       headers.set("Expires", "0");
-      headers.set("X-Next-One-Release", "launch17-live-20260920");
+      headers.set("X-Next-One-Release", "launch17-fixed-20260920");
 
       return new Response(assetResponse.body, {
         status: assetResponse.status,
